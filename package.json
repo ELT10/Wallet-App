@@ -1,0 +1,56 @@
+{
+  "name": "App",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "@binance-chain/bsc-connector": "^1.0.0",
+    "@nivo/bar": "^0.83.0",
+    "@nivo/core": "^0.83.0",
+    "@nivo/line": "^0.83.0",
+    "@nivo/pie": "^0.83.0",
+    "@web3-react/coinbase-wallet": "^8.2.0",
+    "@web3-react/core": "^8.2.0",
+    "@web3-react/injected-connector": "6.0.7",
+    "@web3-react/metamask": "^8.2.1",
+    "@web3-react/walletconnect-connector": "6.2.13",
+    "@web3-react/walletconnect-v2": "^8.3.7",
+    "@web3-react/walletlink-connector": "6.2.14",
+    "bitly": "^7.1.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.10.1",
+    "react-qr-code": "^2.0.12",
+    "react-router-dom": "^6.4.0",
+    "react-scripts": "^5.0.1",
+    "reactstrap": "^9.1.4",
+    "url": "^0.11.1",
+    "web3": "1.10.1"
+  },
+  "devDependencies": {
+    "@babel/runtime": "7.22.6",
+    "typescript": "5.1.6",
+    "yarn-upgrade-all": "^0.7.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      "chrome >= 67",
+      "edge >= 79",
+      "firefox >= 68",
+      "opera >= 54",
+      "safari >= 14"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

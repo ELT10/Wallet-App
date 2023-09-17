@@ -1,0 +1,396 @@
+.mainsection {
+  max-width: 600px;
+  margin: auto;
+}
+
+@media (max-width: 520px) {
+  .logsignsec {
+    padding: 10px;
+  }
+
+  .walletsecp2,
+  .selectcuramt,
+  .minerAvailableTitle,
+  .trandelp,
+  .btn-bg-yellow,
+  .calculatorBtn {
+    font-size: 14px;
+  }
+
+  .minertabsec .nav-link.typetabbtn {
+    padding: 11px 0px;
+  }
+
+  .minerimg {
+    width: 40px;
+  }
+}
+
+.text1 {
+  font-size: 14px;
+  color: var(--secondarycolor);
+}
+
+.brrtb {
+  border-radius: 0px 8px 8px 0px !important;
+}
+
+.sendreceivesec {
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.walletamtp {
+  font-size: 40px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 500;
+  margin: 10px 0px 25px 0px;
+}
+
+.walletamtp2 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.sendbtn,
+.receivebtn,
+.sendbtn:hover,
+.receivebtn:hover {
+  padding: 10px;
+  background-color: #e0e7ea;
+  color: #3a4e56;
+  border: 1px solid #4f6b75;
+}
+
+.sendbtn {
+  cursor: pointer;
+}
+
+.receivebtn {
+  cursor: pointer;
+}
+
+.wallettabsec ul li {
+  width: 50%;
+}
+
+.wallettokenrow {
+  background-color: #ffffff;
+}
+
+.tranheadp,
+.trandelp {
+  font-size: 20px;
+  color: #000000;
+  font-weight: 500;
+}
+
+.trandelp {
+  font-size: 16px;
+  color: #253237;
+}
+
+/************ Send *********/
+
+.inputdetailp {
+  background-color: #e0e7ea;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #4f6b75;
+}
+
+/********** Receive *************/
+
+.barcodeimg {
+  text-align: center;
+  width: 85%;
+  margin: auto;
+}
+
+.copysharegroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.barcodenop {
+  text-align: center;
+  color: #000000;
+  font-weight: 500;
+  font-size: 18px;
+  word-wrap: break-word;
+}
+
+.featurebtn p {
+  color: #4f6b75;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.featureimg {
+  padding: 10px;
+  background-color: var(--primarycolor);
+  border-radius: 100px;
+}
+
+/************ Transaction type ****************/
+
+.transctionamtp {
+  font-size: 36px;
+  color: #ff5656;
+  text-align: center;
+}
+
+.singleDetail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #4f6b75;
+  flex-wrap: wrap;
+}
+
+.wordbreak {
+  word-break: break-word;
+}
+
+.swapcurimg,
+.collectearnimg {
+  width: 34px;
+}
+
+.swapiconrow {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.swapdel p {
+  margin: 0px;
+}
+
+.arrowdownimg {
+  margin-left: 45px;
+}
+
+.lightgrey-bg {
+  background-color: #eeeeee;
+}
+
+.brtlr,
+.detailCard.brtlr {
+  border-radius: 8px 8px 0px 0px;
+}
+
+.darksec-bg {
+  background-color: #4f6b75;
+}
+
+.mb5 {
+  margin-bottom: 5px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mb15 {
+  margin-bottom: 15px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.minertabsec .nav-link.typetabbtn,
+.wallettabsec .nav-link.typetabbtn {
+  border: 1px solid #eeeeee;
+  background: white;
+  color: var(--secondarycolor);
+  border-radius: unset;
+  width: 100%;
+  font-weight: 500;
+}
+
+.minertabsec .nav-link.typetabbtn.active,
+.wallettabsec .nav-link.typetabbtn.active {
+  color: var(--secondarycolor);
+  background: var(--primarycolor);
+}
+
+.wallettabsec .nav-link.typetabbtn {
+  padding: 6px 0px;
+}
+
+.brltb {
+  border-radius: 8px 0px 0px 8px !important;
+}
+
+.selectcurrow,
+.selectedminer,
+.wallettokenrow {
+  border: 1px solid #e4e5e5;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.selectcurrowcontent,
+.selectedminercontent {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+}
+
+.selectcurrowcontent.darksec-bg {
+  background-color: #4f6b75;
+  color: #ffffff;
+  border: 1px solid #4f6b75;
+  border-radius: 8px;
+}
+
+.selectcurrowcontent.darksec-bg .selectcuramt {
+  color: #ffffff;
+}
+
+.selectcurimgside {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.curicondel {
+  font-size: 12px;
+}
+
+.minerspectable th span,
+.selectcurpricep {
+  font-size: 10px;
+}
+
+.selectcurpricep span {
+  margin-left: 5px;
+}
+
+.minerspectable th span,
+.selectcurpricep {
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.walletsecp2,
+.selectcuramt {
+  font-size: 18px;
+  color: var(--secondarycolor);
+  font-weight: 700;
+}
+
+.marginzero {
+  margin: 0 !important;
+}
+
+/* {//Accordian} */
+#accordionExample .accordion-button.mineraccordianbtn {
+  background-color: #ffffff;
+}
+
+.mineraccordianbtn {
+  gap: 25%;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.mineraccordianbtn:after {
+  background-image: url("../../../images/accordian-btn-icon.svg");
+  width: 12px;
+  height: 8px;
+  background-size: contain;
+}
+
+.mineraccordianbtn:not(.collapsed)::after {
+  background-image: url("../../../images/accordian-btn-icon.svg");
+  transform: rotate(180deg);
+}
+
+.mineraccordianbtn.collapsed {
+  border-radius: 8px;
+}
+
+.mineraccordian .minerlist,
+.mineraccordian .mineraccordianbody {
+  padding: 0;
+  margin: 0;
+}
+
+.mineraccordianitem {
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.mineraccordian .minerlist li {
+  border: 1px solid #d9d9d9;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  display: flex;
+  font-size: 12px;
+  justify-content: space-between;
+  padding: 15px 10px;
+  width: 100%;
+}
+
+.mineraccordian .minerlist li label {
+  color: #253237;
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.mineraccordian .minerlist li span {
+  color: #253237;
+  font-weight: 700;
+  text-align: right;
+}
+
+.minerimg {
+  width: 60px;
+}
+
+.modal-content {
+  border-radius: 8px !important;
+  padding: unset !important;
+}
+
+.bnbconversion {
+  padding: 5px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-top: 0.1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 0.1px solid rgba(0, 0, 0, 0.3);
+  color: #4f6b75;
+}
+
+.convertsionbox .transictionconfirmsec a {
+  width: 100% !important;
+}
+
+.convertsionbox {
+  border: 1px solid #e0e7ea;
+}
+
+@media (max-width: 580px) {
+  .walletamtp {
+    margin: 0px 0px 5px 0px !important;
+  }
+
+  .wallettabsec .nav-link.typetabbtn {
+    padding: 10px !important;
+  }
+}

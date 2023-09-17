@@ -1,0 +1,12 @@
+.mainsection {
+  max-width: 600px;
+  margin: auto;
+}
+
+.featureimg {
+  padding: 10px;
+  background-color: var(--primarycolor);
+  border-radius: 100px;
+  justify-content: center;
+  display: flex;
+}

@@ -1,0 +1,91 @@
+.mainsection {
+  max-width: 600px;
+  margin: auto;
+}
+
+@media (max-width: 520px) {
+  .logsignsec {
+    padding: 10px;
+  }
+}
+
+.lightgrey-bg {
+  background-color: #eeeeee;
+}
+
+.brtlr,
+.detailCard.brtlr {
+  border-radius: 8px 8px 0px 0px;
+}
+
+.backbtnsec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #4f6b75;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.walletsecp2,
+.selectcuramt,
+.minerAvailableTitle,
+.trandelp,
+.btn-bg-yellow,
+.calculatorBtn {
+  font-size: 14px;
+}
+
+.darksec-bg {
+  background-color: #4f6b75 !important;
+}
+
+.selectcurrowcontent.darksec-bg {
+  background-color: #4f6b75 !important;
+  color: #ffffff !important;
+  border: 1px solid #4f6b75 !important;
+  border-radius: 8px !important;
+}
+
+.selectcurrowcontent.darksec-bg .selectcuramt {
+  color: #ffffff !important;
+}
+
+.inputdetailp {
+  background-color: #e0e7ea;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #4f6b75;
+}
+
+.text1 {
+  font-size: 14px;
+  color: #253237;
+}
+
+.maxpan {
+  background-color: #4F6B75 !important;
+  border-top-right-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
+  border-left-color: #fff !important;
+  border: 1px solid #E2E8F0 !important;
+  border-left-color: #fff !important;
+  color: #FFC727;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 0px;
+  font-size: 13px
+}
+
+.pastespan {
+  background-color: #fff !important;
+  border-top-right-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
+  border-left-color: #fff !important;
+  border: 1px solid #E2E8F0 !important;
+  border-left-color: #fff !important;
+  cursor: pointer;
+  margin-left: 0px;
+
+}

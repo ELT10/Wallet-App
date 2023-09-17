@@ -1,0 +1,97 @@
+.wallettokenrow {
+  background-color: #ffffff;
+}
+
+.selectcurrow,
+.selectedminer,
+.wallettokenrow {
+  border: 1px solid #e4e5e5;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.selectcurrowcontent,
+.selectedminercontent {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+}
+
+.selectcurrowcontent.darksec-bg {
+  background-color: #4f6b75;
+  color: #ffffff;
+  border: 1px solid #4f6b75;
+  border-radius: 8px;
+}
+
+.selectcurrowcontent.darksec-bg .selectcuramt {
+  color: #ffffff;
+}
+
+.selectcurimgside {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.curicondel {
+  font-size: 12px;
+}
+
+.marginzero {
+  margin: 0 !important;
+}
+
+.minerspectable th span,
+.selectcurpricep {
+  font-size: 10px;
+}
+
+.minerspectable th span,
+.selectcurpricep {
+  font-size: 10px;
+}
+
+.selectcurpricep span {
+  margin-left: 5px;
+}
+
+.beptewn {
+  text-align: center !important;
+  align-items: center !important;
+  display: flex !important;
+  justify-content: center !important;
+  background: rgb(108, 117, 125) !important;
+}
+.beptewn-sel {
+  text-align: center !important;
+  align-items: center !important;
+  display: flex !important;
+  justify-content: center !important;
+  background: rgb(255, 255, 255) !important;
+  color: #4f6b75 !important;
+}
+
+@media (max-width: 520px) {
+  .walletsecp2,
+  .selectcuramt,
+  .minerAvailableTitle,
+  .trandelp,
+  .btn-bg-yellow,
+  .calculatorBtn {
+    font-size: 14px;
+  }
+}
+
+.selectcurrowcontent.darksec-bg .selectcuramt {
+  color: #ffffff;
+}
+
+.walletsecp2,
+.selectcuramt {
+  font-size: 18px;
+  color: var(--secondarycolor);
+  font-weight: 700;
+  text-align: right;
+}
