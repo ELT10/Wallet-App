@@ -1,111 +1,1908 @@
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
+@keyframes up-down {
+  0% {
+      transform: translateY(10px)
+  }
+
+  to {
+      transform: translateY(-10px)
+  }
+}
+
+@keyframes loader {
+  0% {
+      transform: rotate(0deg)
+  }
+
+  to {
+      transform: rotate(360deg)
+  }
+}
 
 :root {
-  scroll-behavior: smooth;
   --primarycolor: #ffc727;
-  --secondarycolor: #253237;
-  --main-bg-color: #fffaea;
-  --white: rgba(255, 255, 255, 0.8);
+  --main-bg-color: #fffaea
 }
 
 body {
   font-family: "Poppins", sans-serif;
-  color: #253237;
+  color: #253237
 }
 
 a {
   color: #f2b40c;
+  text-decoration: none
+}
+
+@media screen and (max-width:768px) {
+  [data-aos-delay] {
+      transition-delay: 0 !important
+  }
+}
+
+#header .logo h1 {
+  font-size: 30px;
+  margin: 0;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 2px
+}
+
+#header .logo h1 a,
+#header .logo h1 a:hover {
+  color: #7a6960;
+  text-decoration: none
+}
+
+#main {
+  margin-top: 72px
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px
+}
+
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul li:hover>a,
+.navbar-mobile .dropdown ul .active:hover,
+.navbar-mobile .dropdown ul a:hover,
+.navbar-mobile .dropdown ul li:hover>a {
+  color: #eb5d1e
+}
+
+@media (max-width:1366px) {
+  .navbar .dropdown .dropdown ul {
+      left: -90%
+  }
+
+  .navbar .dropdown .dropdown:hover>ul {
+      left: -100%
+  }
+}
+
+@media (max-width:991px) {
+  .mobile-nav-toggle {
+      display: block
+  }
+
+  .navbar ul {
+      display: none
+  }
+}
+
+#home .btn-get-secondry.web3-btn.callogbtn {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background-color: #ffc727
+}
+
+@media (max-width:991px) {
+  #home .animated {
+      animation: none
+  }
+
+  #home .hero-img {
+      text-align: center
+  }
+
+  #home .hero-img img {
+      width: 50%
+  }
+}
+
+@media (max-width:768px) {
+  #home h1 {
+      font-size: 28px;
+      line-height: 36px
+  }
+
+  #home h2 {
+      font-size: 18px;
+      line-height: 24px
+  }
+
+  #home .hero-img img {
+      width: 70%
+  }
+}
+
+@media (max-width:575px) {
+  #home .hero-img img {
+      width: 80%
+  }
+}
+
+.section-title p::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #eb5d1e;
+  bottom: 0;
+  left: calc(50% - 30px)
+}
+
+.breadcrumbs ol li+li {
+  padding-left: 10px
+}
+
+.breadcrumbs ol li+li::before {
+  display: inline-block;
+  padding-right: 10px;
+  color: #6c757d;
+  content: "/"
+}
+
+@media (max-width:768px) {
+  .breadcrumbs .d-flex {
+      display: block !important
+  }
+
+  .breadcrumbs ol {
+      display: block
+  }
+
+  .breadcrumbs ol li {
+      display: inline-block
+  }
+}
+
+@media (max-width:991px) {
+  .anft .about-img img {
+      max-width: 70%
+  }
+}
+
+@media (max-width:767px) {
+  .anft .about-img img {
+      max-width: 90%
+  }
+
+  .aligncenter {
+      justify-content: center !important;
+      flex-wrap: wrap
+  }
+}
+
+.statistics .icon i {
+  font-size: 48px;
+  line-height: 1;
+  margin-bottom: 15px;
+  color: var(--primarycolor)
+}
+
+#footer .footer-top .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0
+}
+
+#footer .footer-top .footer-links ul i {
+  padding-right: 2px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1
+}
+
+#footer .footer-top .footer-links ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center
+}
+
+.footer-top .social-links a:hover {
+  background: var(--primarycolor);
+  color: var(--secondarycolor) !important;
+  text-decoration: none
+}
+
+@media (max-width:575px) {
+
+  #footer .copyright,
+  #footer .credits {
+      float: none;
+      -moz-text-align-last: center;
+      text-align-last: center;
+      padding: 3px 0
+  }
+
+  #statistics .row,
+  .miner-accord {
+      width: 100%;
+      margin: 0 auto
+  }
+
+  .how-works {
+      width: 95%
+  }
+
+  .statistics .icon-box {
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto 30px;
+      background: #253237;
+      box-shadow: 0 10px 29px 0 rgba(68, 88, 144, .1);
+      transition: all .3s ease-in-out;
+      border-radius: 8px;
+      text-align: center;
+      border-bottom: 3px solid #fff;
+      width: 240px;
+      height: 140px
+  }
+
+  h3 {
+      font-size: 24px;
+      color: var(--secondarycolor)
+  }
+
+  h6 {
+      font-size: 20px
+  }
+
+  .anft img {
+      width: 80%
+  }
+
+  #home h2,
+  #home h3,
+  .home-btn {
+      text-align: center
+  }
+
+  #home h2,
+  h3 {
+      font-weight: 700
+  }
+
+  #home h2 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 56px
+  }
+
+  #home h3 {
+      margin: 15px 0 0;
+      font-size: 16px;
+      color: var(--secondarycolor);
+      font-weight: 500
+  }
+
+  .callogbtn {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center
+  }
+
+  .calcell,
+  .respmb {
+      margin-bottom: 20px
+  }
+
+  section {
+      padding: 40px 0
+  }
+}
+
+.calcell,
+.calculatorBtn {
+  width: 280px
+}
+
+.footerimg {
+  text-align: center
+}
+
+.brrr {
+  border-radius: 8px
+}
+
+.connectto .concon {
+  margin-bottom: 5px
+}
+
+.backbtn {
+  z-index: 1000
+}
+
+.minerspectable td {
+  padding: .5rem
+}
+
+.selectcurbtnsec button {
+  width: 50%
+}
+
+.selectcurbtnsec .apbtn:disabled {
+  background: #dcdbdb;
+  border: 1px solid #d2cece;
+  color: #b2b0b0
+}
+
+.btn-outline-color-secondary:disabled {
+  background: #e2e2e2 !important;
+  border: 1px solid #979797 !important;
+  color: #979797 !important;
+}
+
+.selectcurbtnsec .paybtn:disabled {
+  border: 0;
+  background: #ffda6e;
+  color: #b2b0b0
+}
+
+
+.backheadmed {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 500
+}
+
+p {
+  margin: 0
+}
+
+.managebtns a {
+  width: 50%
+}
+
+.accordion-button.colearnaccobtn .colearndel img {
+  transition: transform .2s ease-in-out
+}
+
+.accordion-button.colearnaccobtn:not(.collapsed) .colearndel img {
+  transform: rotate(180deg)
+}
+
+@media (max-width:520px) {
+  #header {
+      margin: 10px 0
+  }
+
+  #header .logo img {
+      max-height: 20px
+  }
+
+  .tabimg {
+      width: 12px
+  }
+
+  .logsignsec,
+  .mainsection,
+  .secpadding {
+      padding: 10px
+  }
+
+  .aboutp,
+  .anftp {
+      font-size: 20px
+  }
+
+  .how-works span {
+      height: 30px;
+      width: 30px;
+      font-size: 20px
+  }
+
+  .navbar .disconnetbtn,
+  .navbar .disconnetbtn:focus {
+      padding: 5px 15px
+  }
+
+  .footerlist,
+  .navbar .disconnetbtn,
+  .navbar .disconnetbtn:focus {
+      font-size: 12px
+  }
+
+  .minertabsec .nav-link.typetabbtn {
+      padding: 11px 0;
+      font-size: 10px
+  }
+
+  .minerAvailablebtn,
+  .reftablesec th {
+      font-size: 11px
+  }
+
+  .headingtext2 {
+      font-size: 16px
+  }
+
+  .minerspectable td {
+      font-size: 10px
+  }
+
+  .backbtn,
+  .backheadmed,
+  .btn-bg-yellow,
+  .calculatorBtn,
+  .minerAvailableTitle,
+  .selectcuramt,
+  .tilespdel,
+  .trandelp,
+  .walletsecp2 {
+      font-size: 14px
+  }
+
+  .btn-outline-grey,
+  .btn-outline-grey:hover {
+      padding: 5px 10px;
+      font-size: 12px
+  }
+
+  .curicondel {
+      font-size: 12px
+  }
+
+  .footersocialicon {
+      width: 25px
+  }
+
+  .minerimg {
+      width: 40px
+  }
+
+  .connectto p {
+      word-wrap: break-word
+  }
+
+  .minerspectable th span,
+  .selectcurpricep {
+      font-size: 8px
+  }
+
+  .social-links {
+      justify-content: space-between
+  }
+
+  .btn-color-primary,
+  .btn-color-primary:hover,
+  .btn-outline-color-secondary,
+  .btn-outline-color-secondary:hover {
+      padding: 10px 0
+  }
+
+  .calcell,
+  .calculatorBtn,
+  .reftablesec .downlinepertable,
+  .reftablesec .rankpertable {
+      width: 100%
+  }
+
+  .refertilerow,
+  .reftablesec,
+  .selectcurbtnsec {
+      gap: 15px
+  }
+
+  .transctionamtp {
+      font-size: 28px;
+      text-align: center
+  }
+
+  .tablebg1,
+  .tablebg2,
+  .tablebg3,
+  .tablebg4 {
+      width: 50%
+  }
+}
+
+.referinvitep {
+  font-weight: 500
+}
+
+.tree {
+  overflow: auto;
+  margin: 1em 1em 1em 0;
+  padding-left: 13px
+}
+
+.tree input {
+  position: absolute;
+  clip: rect(0, 0, 0, 0)
+}
+
+.tree input~ul {
+  display: none;
+  padding-top: 1em
+}
+
+.tree input:checked~ul {
+  display: block
+}
+
+.tree li {
+  line-height: 1.2;
+  position: relative;
+  padding: 0 0 1em 1em;
+  background-image: linear-gradient(#3b4e52 40%, rgba(255, 255, 255, 0)0);
+  background-position: left 7px;
+  background-size: 1px 13px;
+  background-repeat: repeat-y
+}
+
+.tree li::marker {
+  color: #eff3f4
+}
+
+.tree ul li {
+  padding: 0 0 1em 1em
+}
+
+.tree>li:last-child {
+  padding-bottom: 0
+}
+
+.tree_label {
+  position: relative;
+  display: inline-block;
+  background: #fff;
+  padding: 5px 8px;
+  border-radius: 2px;
+  box-shadow: -17px 3px 0 13px #eff3f4
+}
+
+label.tree_label {
+  cursor: pointer;
+  min-width: 200px
+}
+
+label.tree_label:hover {
+  color: #666
+}
+
+label.tree_label:before {
+  background: #4f6b75;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  float: left;
+  margin: 0 1em 0-34px;
+  width: 20px;
+  height: 20px;
+  content: "+";
+  text-align: center;
+  line-height: 20px
+}
+
+:checked~label.tree_label:before {
+  content: "–"
+}
+
+:checked~label.tree_label {
+  content: "–";
+  box-shadow: unset
+}
+
+.tree li:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -.5em;
+  display: block;
+  width: 0;
+  content: ""
+}
+
+.tree li:last-child:before {
+  height: 1em;
+  bottom: auto
+}
+
+.tree>li:last-child:before {
+  display: none
+}
+
+.tree .salesspan {
+  float: right;
+  border-radius: 2px;
+  background: #ffc727;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 10px;
+  display: inline-flex
+}
+
+.farmmodal .modal-content {
+  padding: 0
+}
+
+.farmmodal .modal-body {
+  margin: 0;
+  padding: 0
+}
+
+.farmmodal.modal-dialog {
+  max-width: 400px
+}
+
+.treemodal .modal-content {
+  padding: 0
+}
+
+.treemodal .modal-body {
+  margin: 0;
+  padding: 0
+}
+
+.treemodal.modal-dialog {
+  max-width: 600px
+}
+
+.downlinecard {
+  max-width: 550px
+}
+
+@media screen and (max-width:770px) {
+  .downlinecard {
+      max-width: fit-content
+  }
+}
+
+#card4 {
+  border-radius: 15px;
+  box-shadow: 0 3.499999761581421px 5.5px 0#00000005;
+  height: 100%;
+  margin: 24px 24px 0;
+  padding-bottom: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+  width: auto
+}
+
+.text12 {
+  padding-top: 15px;
+  color: #2c3356;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+  margin-bottom: 1rem
+}
+
+.text5 {
+  color: #a0aec0;
+  font-size: 12px;
+  font-weight: 700
+}
+
+.text6 {
+  font-size: 15px;
+  font-weight: 600
+}
+
+.brnone {
+  display: none
+}
+
+@media screen and (max-width:550px) {
+  .brnone {
+      display: block
+  }
+}
+
+.earnedpsec {
+  padding: 18px 10px
+}
+
+.earnedp {
+  color: #2d3748;
+  font-size: 12px;
+  line-height: 140%;
+  margin: 0
+}
+
+.treebox {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, .125)
+}
+
+.wallet-lists img {
+  float: right;
+  height: 26px
+}
+
+.wallet-lists {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0
+}
+
+.wallet-lists li {
+  padding: 16px;
+  background: #eee;
+  margin: 10px 0;
+  border-radius: 10px;
+  cursor: pointer
+}
+
+.connectmodalbg {
+  opacity: .8 !important
+}
+
+.modal-content {
+  background-color: #e2e8f0 !important;
+  border-radius: 30px !important;
+  border: 0;
+  padding: 10px 30px 30px;
+  background: #e2e8f0
+}
+
+@media (max-width:576px) {
+  .modal-content {
+      width: 100% !important;
+      margin-top: 15% !important
+  }
+}
+
+.refmodal .modal-content {
+  padding: 0
+}
+
+.refmodal .modal-body {
+  margin: 0;
+  padding: 0
+}
+
+@media (min-width:576px) {
+  .modal-sm {
+      max-width: 391px
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh
+}
+
+.content {
+  flex: 1
+}
+
+.modalswap {
+  border-radius: 15px !important
+}
+
+.blacktxtbtn .btn {
+  color: #000 !important
+}
+
+.chartbx {
+  height: 67%;
+  background-color: #fff;
+  border-radius: 8px
+}
+
+@media screen and (min-width:450px) and (max-width:500px) {
+  .chartbx {
+      height: 85%
+  }
+}
+
+@media screen and (max-width:450px) {
+  .chartbx {
+      height: 80%
+  }
+}
+
+.chtable {
+  width: 70%;
+  margin: 0 auto
+}
+
+.chbxhdiv {
+  height: 450px
+}
+
+@media screen and (min-width:1500px) and (max-width:1950px) {
+  .chtable {
+      width: 90%
+  }
+}
+
+@media screen and (min-width:1120px) and (max-width:1400px) {
+  .chtable {
+      width: 90%
+  }
+}
+
+@media screen and (min-width:1000px) and (max-width:1120px) {
+  .chtable {
+      width: 100%
+  }
+}
+
+@media screen and (min-width:550px) and (max-width:650px) {
+  .chtable {
+      width: 85%
+  }
+
+  .prodtable {
+      width: 82vw;
+      margin: auto
+  }
+}
+
+@media screen and (max-width:550px) {
+  .chtable {
+      width: 100%
+  }
+
+  .chbxhdiv {
+      margin-bottom: 5px
+  }
+
+  .prodtable {
+      width: 85vw;
+      margin: auto
+  }
+}
+
+@media screen and (max-width:500px) {
+  .mobnone {
+      display: none
+  }
+}
+
+@media screen and (max-width:450px) {
+  .chbxhdiv {
+      height: 400px
+  }
+
+  .tableitemx {
+      font-size: 13px;
+      padding: 15px
+  }
+}
+
+@media screen and (max-width:400px) {
+  .chbxhdiv {
+      height: 350px
+  }
+
+  .tableitemx {
+      font-size: 12px;
+      padding: 20px
+  }
+}
+
+@media screen and (max-width:370px) {
+  .chbxhdiv {
+      height: 300px
+  }
+}
+
+@media screen and (max-width:365px) {
+  .tableitemx {
+      font-size: 12px;
+      padding: 10px
+  }
+}
+
+.pxx6 {
+  padding-left: 0;
+  padding-right: 0
+}
+
+@media screen and (min-width:768px) {
+  .pxx6 {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem
+  }
+}
+
+.walletbtns {
+  width: 100%;
+  border: 0;
+  background-color: transparent !important;
+  font-size: 10px;
+  font-family: Helvetica;
+  font-weight: 700;
+  box-shadow: unset
+}
+
+.mainpill .typetabbtn {
+  font-weight: 600 !important;
+  font-size: 13px !important
+}
+
+.pillmenuicon {
+  margin-right: 2px
+}
+
+@media screen and (max-width:610px) {
+  .mainsection {
+      padding: 0 !important;
+      margin: 0 10px !important
+  }
+
+  .connectto,
+  .walletamtsec {
+      margin-bottom: 10px !important
+  }
+
+  .secpadding {
+      padding: 12px 20px !important
+  }
+
+  .mobrefhr {
+      margin-top: 8px !important
+  }
+
+  .secpadding .btn-bg-yellow {
+      height: 34px;
+      min-width: 100px;
+      font-size: 13px
+  }
+
+  .secpadding .bnbvals {
+      font-size: 14px
+  }
+
+  .mainpill .typetabbtn {
+      font-weight: 500 !important;
+      font-size: 12px !important
+  }
+
+  .minerAvailableImage {
+      min-height: 150px
+  }
+}
+
+@media screen and (max-width:520px) {
+  .walletbtns {
+      padding: 3px;
+      font-size: 9px
+  }
+
+  #header {
+      height: 55px
+  }
+
+  .connectto {
+      padding: 8px !important
+  }
+
+  .connectto p {
+      font-size: 13px !important
+  }
+
+  .secpadding .bnbvals {
+      font-size: 12px
+  }
+
+  .walletsecp,
+  .walletsecp2 {
+      font-size: 11px !important;
+      text-align: center
+  }
+
+  .walletsecp2 {
+      font-size: 12px !important
+  }
+
+  .secpadding .btn-bg-yellow {
+      height: 28px;
+      min-width: 85px;
+      font-size: 12px
+  }
+
+  .mainpill .typetabbtn {
+      font-weight: 600 !important;
+      font-size: 11px !important
+  }
+
+  .pillmenuicon {
+      height: 12px
+  }
+
+  .minerAvailableImage {
+      min-height: 135px
+  }
+}
+
+@media screen and (max-width:420px) {
+
+  .connectto p,
+  .mainpill .typetabbtn {
+      font-size: 11px !important
+  }
+
+  .mainpill .typetabbtn {
+      font-weight: 600 !important
+  }
+
+  .pillmenuicon {
+      margin-right: 0;
+      height: 10px
+  }
+
+  .secpadding {
+      padding: 12px 14px !important
+  }
+
+  .minerAvailableImage {
+      min-height: 105px
+  }
+}
+
+@media screen and (max-width:380px) {
+  .connectto p {
+      font-size: 11px !important
+  }
+
+  .mainpill .typetabbtn {
+      font-weight: 600 !important;
+      font-size: 10px !important
+  }
+
+  .pillmenuicon {
+      margin-right: 0;
+      height: 10px
+  }
+}
+
+@media screen and (max-width:350px) {
+  .connectto p {
+      font-size: 11px !important
+  }
+}
+
+@media screen and (max-width:450px) {
+  .egoldminertab {
+      display: grid !important
+  }
+}
+
+.quickstartbn {
+  justify-content: space-between;
+  padding: 10px;
+  display: flex
+}
+
+.quickbuy,
+.textquick,
+.textquickend {
+  font-size: 14px;
+  font-weight: 400;
+  color: #4f6b75
+}
+
+.quickbuy,
+.textquickend {
+  font-weight: 600
+}
+
+.quickbuy {
+  height: 37px;
+  padding: 0 10px;
+  min-width: 132px;
+  background: #fff;
+  color: #253237;
+  border: 1px solid #4f6b75;
+  border-radius: 8px
+}
+
+.quickactivate {
+  border: 0
+}
+
+.quickcompleted,
+.quickcompleted:hover {
+  height: 37px;
+  padding: 0 10px;
+  min-width: 132px;
+  background: #fff;
+  color: #4fd1c5;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #4fd1c5;
+  border-radius: 8px
+}
+
+.quickstartdiv {
+  border: 1px solid #d9d9d9 !important;
+  margin-bottom: 0 !important
+}
+
+.egoldminertab {
+  font-weight: 400;
+  gap: 8px;
+  display: flex;
+  text-align: center;
+  font-size: 18px
+}
+
+.rulesdiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 10px
+}
+
+.claimgold,
+.claimsilver,
+.rulesbtn {
+  color: #3a4e56;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px
+}
+
+.rulesbtn {
+  width: 100%;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #4f6b75
+}
+
+.claimgold,
+.claimsilver {
+  padding: 10px 20px;
+  border: 0
+}
+
+.claimsilver {
+  width: 50%;
+  background: #c8c8c8
+}
+
+.claimgold {
+  width: 100%;
+  background: #ffc727
+}
+
+.claimgold:disabled {
+  border: 0;
+  background: #ffda6e;
+  color: #b2b0b0
+}
+
+.qscardtile {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: .4px;
+  text-align: right
+}
+
+.qbtree .firstul {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  padding-top: 10px
+}
+
+.qbtree li,
+.qbtree ul {
+  position: relative;
+  transition: all .5s;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s
+}
+
+.qbtree ul {
+  padding-top: 20px;
+  padding-left: 0
+}
+
+.qbtree li {
+  float: left;
+  text-align: center;
+  list-style-type: none;
+  padding: 20px 12px 0
+}
+
+.qbtree li::after,
+.qbtree li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 2px solid #ddd;
+  width: 50%;
+  height: 20px
+}
+
+.qbtree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 2px solid #ddd
+}
+
+.qbtree li:only-child::after,
+.qbtree li:only-child::before {
+  display: none
+}
+
+.qbtree li:only-child {
+  padding-top: 0
+}
+
+.qbtree li:first-child::before,
+.qbtree li:last-child::after {
+  border: 0
+}
+
+.qbtree li:last-child::before {
+  border-right: 2px solid #ddd;
+  border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0
+}
+
+.qbtree li:first-child::after {
+  border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0
+}
+
+.qbtree ul ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 2px solid #ddd;
+  width: 0;
+  height: 20px
+}
+
+.qbtree li div {
+  padding: 12px 10px;
   text-decoration: none;
+  background: #4f6b75;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+  border-radius: 100%;
+  transition: all .5s;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  height: 42px;
+  width: 42px
+}
+
+.qbtree li div.silver {
+  background-color: #e4e5e5;
+  color: #000
+}
+
+.qbtree li div.silver.active {
+  background-color: #c8c8c8;
+  color: #000
+}
+
+.qbtree li div.gold {
+  background-color: #ffdd7b;
+  color: #000
+}
+
+.qbtree li div.gold.active {
+  background-color: #ffc727;
+  color: #000
+}
+
+.qbtree li div:hover,
+.qbtree li div:hover+ul li a {
+  background: #c8e4f8;
+  color: #000;
+  border: 1px solid #94a0b4
+}
+
+.qbtree li div:hover+ul li::after,
+.qbtree li div:hover+ul li::before,
+.qbtree li div:hover+ul ul::before,
+.qbtree li div:hover+ul::before {
+  border-color: #94a0b4
+}
+
+.treenodes {
+  visibility: hidden
+}
+
+.active .treenodes {
+  visibility: visible
+}
+
+@media screen and (max-width:520px) {
+  .qbtree li div {
+      height: 36px;
+      width: 36px;
+      padding: 10px 0
+  }
+}
+
+@media screen and (max-width:480px) {
+  .qbtree li {
+      padding: 20px 13px 0
+  }
+}
+
+@media screen and (max-width:410px) {
+  .qbtree li div {
+      height: 33px;
+      width: 33px;
+      padding: 8px 0
+  }
+
+  .qbtree li {
+      padding: 20px 10px 0
+  }
+}
+
+@media screen and (max-width:350px) {
+  .qbtree li div {
+      height: 26px;
+      width: 26px;
+      padding: 5px 0;
+      font-size: 10px
+  }
+
+  .qbtree li {
+      padding: 20px 6px 0
+  }
+}
+
+.referheading {
+  color: #4f6b75;
+  font-weight: 600
+}
+
+.dbgreferheading {
+  color: #fff;
+  font-weight: 600
+}
+
+.quicktext {
+  color: #fff;
+  font-weight: 500;
+  line-height: 32px
+}
+
+.dbg-card {
+  background-color: #648795
+}
+
+.referinvibtns {
+  cursor: pointer;
+  border-color: #4f6b75;
+  color: #4f6b75
+}
+
+.refercardbg {
+  background-color: #648795;
+  padding: 12px 20px !important
+}
+
+@media screen and (min-width:520px) {
+  .headcontainer {
+      max-width: 600px;
+      margin: auto;
+      padding: 0
+  }
+
+  #header {
+      margin: 20px auto !important
+  }
+}
+
+@media screen and (max-width:610px) {
+  .headcontainer {
+      padding: 0 10px
+  }
+
+  #header {
+      margin-bottom: 10px !important
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .headcontainer {
+      max-width: 920px;
+      margin: 0 auto
+  }
+}
+
+@media screen and (min-width:900px) {
+  .headcontainer {
+      max-width: 850px;
+      margin: 0 auto
+  }
+
+  .innerhc {
+      padding: 0 35px
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .headcontainer {
+      max-width: 1120px;
+      margin: 0 auto
+  }
+}
+
+@media screen and (min-width:1400px) {
+  .headcontainer {
+      max-width: 1320px;
+      margin: 0 auto
+  }
+}
+
+.cardtop {
+  padding: 14px 20px !important;
+  font-size: 15px
+}
+
+.cardtext {
+  padding: 16px 20px !important
+}
+
+.cardtext p {
+  font-size: 13px
+}
+
+.darkbgselect,
+.form-select.darksec-bg {
+  background-image: url(./images/downarrow.png);
+  background-size: 12px 8px
+}
+
+.accordion-item,
+.mineraccordianbtn {
+  border-radius: 8px !important
+}
+
+.rcard-bg {
+  background-color: #d0dbe0
+}
+
+.rcard-bg .text2 {
+  color: #4c6974 !important
+}
+
+.inviaddress {
+  color: #cedade;
+  font-size: 14px
+}
+
+.complanbtn {
+  cursor: pointer;
+  font-size: 13px
+}
+
+.inviprefer {
+  text-align: left;
+  font-size: 13px
+}
+
+@media screen and (max-width:520px) {
+  .quicktext {
+      font-size: 17px;
+      line-height: 23px
+  }
+
+  .inviprefer {
+      font-size: 11px
+  }
+
+  .cols-6 {
+      width: 50%;
+      text-align: center !important
+  }
+
+  .mob-mb-25 {
+      margin-bottom: 25px
+  }
+
+  .backheadmed {
+      font-size: 16px !important
+  }
+
+  .backbtn {
+      font-size: 15px !important
+  }
+
+  .backbtn svg {
+      font-size: 24px !important
+  }
+
+  .maccdn .manageaccorheadp {
+      width: 80%;
+      font-size: 15px
+  }
+}
+
+@media screen and (max-width:460px) {
+  .referinvitep {
+      font-size: 13px
+  }
+
+  .inviaddress {
+      font-size: 12px
+  }
+
+  .inviprefer {
+      font-size: 11px
+  }
+
+  .refercardbg {
+      padding: 12px 15px !important
+  }
+
+  .backbtn {
+      font-size: 14px !important;
+      gap: 2px !important
+  }
+
+  .backbtn svg {
+      font-size: 22px !important
+  }
+}
+
+@media screen and (max-width:410px) {
+  .referinvitep {
+      font-size: 12px
+  }
+
+  .inviaddress {
+      font-size: 11px
+  }
+
+  .complanbtn {
+      font-size: 11px !important
+  }
+
+  .quicktext {
+      font-size: 14px;
+      line-height: 21px
+  }
+
+  .inviprefer {
+      font-size: 9px
+  }
+
+  .backbtn {
+      font-size: 12px !important
+  }
+
+  .backbtn svg {
+      font-size: 23px !important
+  }
+
+  .backtext {
+      display: none
+  }
+
+  .maccdn .manageaccorheadp {
+      width: 80%;
+      font-size: 14px
+  }
+}
+
+@media screen and (max-width:395px) {
+  .complanbtn {
+      font-size: 10px !important
+  }
+
+  .refercardbg {
+      padding: 12px !important
+  }
+
+  .backheadmed {
+      font-size: 16px !important
+  }
+}
+
+button:focus {
+  box-shadow: none !important
+}
+
+button:active {
+  box-shadow: none !important
+}
+
+@media screen and (max-width:795px) {
+  .maccdn .mineraccordianbtn {
+      gap: 15% !important
+  }
+
+  .maccdn .minerimg {
+      width: 20%
+  }
+}
+
+.bg-dbg {
+  background-color: #4f6b75
+}
+
+.teaccordion {
+  overflow: hidden;
+  transition: max-height .3s ease-out;
+  max-height: 0
+}
+
+.teaccordion.open {
+  max-height: 500px
+}
+
+.teaccordion-content {
+  padding-top: 20px
+}
+
+:focus-visible {
+  outline: 0
+}
+
+.managebtns {
+  display: flex
+}
+
+.calcwrap {
+  background: #ffff;
+  border-radius: 8px;
+  padding: 20px
+}
+
+.yeiddiv {
+  background: #f5f5f5;
+  justify-content: space-between;
+  display: flex;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0
+}
+
+
+@media (max-width:1000px) {
+
+  .calcell,
+  .respmb {
+      margin-bottom: 20px
+  }
+
+  #footer {
+      padding: 0
+  }
+
+  .social-links {
+      justify-content: space-around;
+      background-color: #3a4e56;
+      padding: 10px
+  }
+
+  .footerlist {
+      justify-content: center
+  }
+
+  #footer .col-lg-8 {
+      padding: 25px
+  }
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(57 57 57/63%);
+  border-radius: 15px 15px 12px 12px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  flex-direction: column;
+  gap: 25px;
+  box-shadow: 0 2px 11px 1px #38383885
+}
+
+#but1:disabled {
+  cursor: not-allowed;
+  pointer-events: unset
+}
+
+.connectinoverlay {
+  float: right;
+  font-size: 10px;
+  font-family: Helvetica;
+  font-weight: 700;
+  border-radius: 8px;
+  background: #ffc727;
+  padding: 0 8px;
+  width: 180px;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: #000;
+  margin-top: 250px
+}
+
+.connectinoverlay button,
+.connectinoverlay button:focus,
+.connectinoverlay button:hover {
+  font-size: 12px !important;
+  color: #000
+}
+
+@media screen and (max-width:490px) {
+  #overlay {
+      font-size: 14px
+  }
+
+  .connectinoverlay {
+      height: 35px !important
+  }
+}
+
+@media screen and (max-width:400px) {
+  #overlay {
+      font-size: 12px;
+      gap: 18px
+  }
+
+  .connectinoverlay {
+      height: 38px !important;
+      width: 150px !important
+  }
+}
+
+.disabledcurrency {
+  background: rgba(0, 0, 0, .5)
+}
+
+.containerbuy {
+  position: relative;
+  cursor: not-allowed
+}
+
+.contentbuy {
+  background-color: #fff
+}
+
+.overlaybuy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 8px;
+  height: 100%;
+  background-color: rgb(111 111 111/50%);
+  pointer-events: none
+}
+
+:root {
+  scroll-behavior: smooth;
+  --primarycolor: #FFC727;
+  --secondarycolor: #253237;
+  --main-bg-color: #FFFAEA;
+  --white: rgba(255, 255, 255, 0.8)
 }
 
 a:hover {
   color: #f2b40c;
-  text-decoration: none;
+  text-decoration: none
 }
 
+.font-primary,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-.font-primary {
-  font-family: "Poppins", sans-serif;
+h6 {
+  font-family: "Poppins", sans-serif
 }
 
 h3 {
   font-weight: 700;
   font-size: 34px;
-  color: #4e4039;
+  color: #4e4039
 }
 
 h6 {
-  font-size: 30px;
+  font-size: 30px
 }
-
-p {
-  margin: 0;
-}
-
-/*************  Common CSS *************/
 
 .mb5 {
-  margin-bottom: 5px;
+  margin-bottom: 5px
 }
 
 .mb10 {
-  margin-bottom: 10px;
+  margin-bottom: 10px
 }
 
 .mb15 {
-  margin-bottom: 15px;
+  margin-bottom: 15px
 }
 
 .mb20 {
-  margin-bottom: 20px;
+  margin-bottom: 20px
 }
 
-.fs12 {
-  font-size: 12px;
+.p15 {
+  padding: 15px
+}
+
+.fs12,
+.navbar .dropdown ul a i,
+.navbar-mobile .dropdown ul a i {
+  font-size: 12px
 }
 
 .fs14 {
-  font-size: 14px;
+  font-size: 14px
 }
 
 .fs16 {
-  font-size: 16px;
+  font-size: 16px
 }
 
 .fs20 {
-  font-size: 20px !important;
+  font-size: 20px !important
 }
 
 .fs24 {
-  font-size: 24px;
+  font-size: 24px
 }
 
 .fw400 {
-  font-weight: 400;
+  font-weight: 400
 }
 
 .fw500 {
-  font-weight: 500;
+  font-weight: 500
 }
 
 .fw600 {
-  font-weight: 600;
+  font-weight: 600
 }
 
 .fw700 {
-  font-weight: 700;
+  font-weight: 700
 }
 
-/*--------------------------------------------------------------
-# Back to top button
---------------------------------------------------------------*/
+.divcenter {
+  display: grid;
+  align-content: center
+}
+
 .back-to-top {
   position: fixed;
   visibility: hidden;
@@ -117,80 +1914,53 @@ p {
   width: 40px;
   height: 40px;
   border-radius: 4px;
-  transition: all 0.4s;
+  transition: all .4s
 }
 
 .back-to-top i {
   font-size: 24px;
   color: #fff;
-  line-height: 0;
+  line-height: 0
 }
 
 .back-to-top:hover {
   background: var(--primarycolor);
-  color: #fff;
+  color: #fff
 }
 
 .back-to-top.active {
   visibility: visible;
-  opacity: 1;
+  opacity: 1
 }
 
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width:768px) {
   [data-aos-delay] {
-    transition-delay: 0 !important;
+      transition-delay: 0 !important
   }
 }
 
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
 #header {
-  height: 60px;
-  transition: all 0.5s;
+  height: 72px;
   z-index: 997;
-  transition: all 0.5s;
+  transition: all .5s;
   background: #fff;
-  margin: 20px 40px;
-  border-radius: 10px;
-  background-color: #e0e7ea;
+  margin: 20px auto;
+  border-radius: 5px;
+  background-color: #e0e7ea
 }
 
-#header .logo h1 {
-  font-size: 30px;
-  margin: 0;
-  line-height: 1;
-  font-weight: 400;
-  letter-spacing: 2px;
-}
-
-#header .logo h1 a,
-#header .logo h1 a:hover {
-  color: #7a6960;
-  text-decoration: none;
+#header.headerindex {
+  background-color: unset
 }
 
 #header .logo img {
   padding: 0;
   margin: 0;
-  max-height: 40px;
+  max-height: 40px
 }
 
-#main {
-  margin-top: 72px;
-}
-
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
-/**
-* Desktop Navigation 
-*/
 .navbar {
-  padding: 0;
+  padding: 0
 }
 
 .navbar ul {
@@ -198,11 +1968,11 @@ p {
   padding: 0;
   display: flex;
   list-style: none;
-  align-items: center;
+  align-items: center
 }
 
 .navbar li {
-  position: relative;
+  position: relative
 }
 
 .navbar a,
@@ -214,21 +1984,14 @@ p {
   font-size: 15px;
   color: #4e4039;
   white-space: nowrap;
-  transition: 0.3s;
+  transition: .3s
 }
 
-.navbar a i,
-.navbar a:focus i {
-  font-size: 12px;
-  line-height: 0;
-  margin-left: 5px;
-}
-
-.navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
+.navbar a:hover,
 .navbar li:hover>a {
-  color: #ffc727;
+  color: #4e4039
 }
 
 .navbar .getstarted,
@@ -237,13 +2000,13 @@ p {
   color: #fff;
   padding: 10px 25px;
   margin-left: 30px;
-  border-radius: 50px;
+  border-radius: 50px
 }
 
-.navbar .getstarted:hover,
-.navbar .getstarted:focus:hover {
+.navbar .getstarted:focus:hover,
+.navbar .getstarted:hover {
   color: #fff;
-  background: #ee7843;
+  background: #ee7843
 }
 
 .navbar .dropdown ul {
@@ -257,82 +2020,70 @@ p {
   opacity: 0;
   visibility: hidden;
   background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-  transition: 0.3s;
+  box-shadow: 0 0 30px rgba(127, 137, 161, .25);
+  transition: .3s
 }
 
-.navbar .dropdown ul li {
-  min-width: 200px;
+.navbar .dropdown ul li,
+.navbar-mobile .dropdown ul li {
+  min-width: 200px
 }
 
 .navbar .dropdown ul a {
   padding: 10px 20px;
   font-size: 15px;
-  text-transform: none;
-}
-
-.navbar .dropdown ul a i {
-  font-size: 12px;
-}
-
-.navbar .dropdown ul a:hover,
-.navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover>a {
-  color: #eb5d1e;
+  text-transform: none
 }
 
 .navbar .dropdown:hover>ul {
   opacity: 1;
   top: 100%;
-  visibility: visible;
+  visibility: visible
 }
 
 .navbar .dropdown .dropdown ul {
   top: 0;
   left: calc(100% - 30px);
-  visibility: hidden;
+  visibility: hidden
 }
 
 .navbar .dropdown .dropdown:hover>ul {
   opacity: 1;
   top: 0;
   left: 100%;
-  visibility: visible;
+  visibility: visible
 }
 
-@media (max-width: 1366px) {
+@media (max-width:1366px) {
   .navbar .dropdown .dropdown ul {
-    left: -90%;
+      left: -90%
   }
 
   .navbar .dropdown .dropdown:hover>ul {
-    left: -100%;
+      left: -100%
   }
 }
 
-/**
-* Mobile Navigation 
-*/
 .mobile-nav-toggle {
   color: #7a6960;
   font-size: 28px;
   cursor: pointer;
   display: none;
   line-height: 0;
-  transition: 0.5s;
+  transition: .5s
 }
 
 .mobile-nav-toggle.bi-x {
-  color: #fff;
+  color: #fff
 }
 
-@media (max-width: 991px) {
+@media (max-width:991px) {
   .mobile-nav-toggle {
-    display: block;
+      display: block
   }
 
   .navbar ul {
-    display: none;
+      display: none
   }
 }
 
@@ -343,46 +2094,46 @@ p {
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(78, 64, 57, 0.9);
-  transition: 0.3s;
-  z-index: 1;
+  background: rgba(78, 64, 57, .9);
+  transition: .3s;
+  z-index: 1
 }
 
-.navbar-mobile .mobile-nav-toggle {
+.navbar-mobile .mobile-nav-toggle,
+.navbar-mobile ul {
   position: absolute;
   top: 15px;
-  right: 15px;
+  right: 15px
 }
 
 .navbar-mobile ul {
   display: block;
-  position: absolute;
   top: 55px;
-  right: 15px;
   bottom: 15px;
   left: 15px;
   padding: 10px 0;
   background-color: #fff;
   overflow-y: auto;
-  transition: 0.3s;
+  transition: .3s
 }
 
 .navbar-mobile a,
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: #7a6960;
+  color: #7a6960
 }
 
-.navbar-mobile a:hover,
+#footer .credits a,
 .navbar-mobile .active,
+.navbar-mobile a:hover,
 .navbar-mobile li:hover>a {
-  color: var(--primarycolor);
+  color: var(--primarycolor)
 }
 
 .navbar-mobile .getstarted,
 .navbar-mobile .getstarted:focus {
-  margin: 15px;
+  margin: 15px
 }
 
 .navbar-mobile .dropdown ul {
@@ -394,189 +2145,140 @@ p {
   opacity: 1;
   visibility: visible;
   background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-}
-
-.navbar-mobile .dropdown ul li {
-  min-width: 200px;
+  box-shadow: 0 0 30px rgba(127, 137, 161, .25)
 }
 
 .navbar-mobile .dropdown ul a {
-  padding: 10px 20px;
-}
-
-.navbar-mobile .dropdown ul a i {
-  font-size: 12px;
-}
-
-.navbar-mobile .dropdown ul a:hover,
-.navbar-mobile .dropdown ul .active:hover,
-.navbar-mobile .dropdown ul li:hover>a {
-  color: #eb5d1e;
+  padding: 10px 20px
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
-  display: block;
+  display: block
 }
 
-/*--------------------------------------------------------------
-# home Section
---------------------------------------------------------------*/
 #home {
   width: 100%;
-  /*height: 70vh;*/
-  background: #ffffff;
-  /*margin: 72px 0 -72px 0;*/
+  background: #fff
 }
 
 #home h2 {
   margin: 0;
   font-size: 48px;
   font-weight: 700;
-  line-height: 56px;
+  line-height: 56px
 }
 
 #home h3 {
-  margin: 15px 0 0 0;
+  margin: 15px 0 0;
   font-size: 24px;
   color: var(--secondarycolor);
-  font-weight: 500;
+  font-weight: 500
 }
 
+#home .btn-get-secondry,
 #home .btn-get-started {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
   display: inline-block;
-  padding: 12px 0px;
+  padding: 12px 0;
   border-radius: 3px;
-  transition: 0.5s;
+  transition: .5s;
   margin-top: 24px;
   color: #253237;
-  background: #ffc727;
   margin-right: 24px;
   width: 200px;
-  text-align: center;
+  text-align: center
+}
+
+#home .btn-get-started {
+  background: #ffc727
 }
 
 #home .btn-get-secondry {
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 0px;
-  border-radius: 3px;
-  transition: 0.5s;
-  margin-top: 24px;
-  color: #253237;
-  background: transparent;
-  border: 1px solid #ffc727;
-  margin-right: 24px;
-  width: 200px;
-  text-align: center;
+  background: 0 0;
+  border: 1px solid #ffc727
 }
 
 #home .btn-get-started:hover {
-  background: #f2b40c;
+  background: #f2b40c
 }
 
 .web3-arrow {
   position: absolute;
-  top: 22%;
+  top: 22%
 }
 
+.section-title p,
 .web3-btn {
-  position: relative;
-}
-
-#home .btn-get-secondry.web3-btn.callogbtn {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  background-color: #ffc727;
+  position: relative
 }
 
 #home .cal-btn {
-  padding: 24px;
+  padding: 24px
 }
 
 #home .animated {
-  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+  animation: up-down 2s ease-in-out infinite alternate-reverse both
 }
 
-@media (max-width: 991px) {
-  /*#home {
-    height: calc(100vh - 72px);
-  }*/
-
+@media (max-width:991px) {
   #home .animated {
-    animation: none;
+      animation: none
   }
 
   #home .hero-img {
-    text-align: center;
+      text-align: center
   }
 
   #home .hero-img img {
-    width: 50%;
+      width: 50%
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
   #home h1 {
-    font-size: 28px;
-    line-height: 36px;
+      font-size: 28px;
+      line-height: 36px
   }
 
   #home h2 {
-    font-size: 18px;
-    line-height: 24px;
+      font-size: 18px;
+      line-height: 24px
   }
 
   #home .hero-img img {
-    width: 70%;
+      width: 70%
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width:575px) {
   #home .hero-img img {
-    width: 80%;
+      width: 80%
+  }
+
+  #header.headerindex {
+      background-color: #e0e7ea
+  }
+
+  #footer .col-lg-8 {
+      padding: 15px
   }
 }
 
-@media (max-height: 600px) {
-  /*#home {
-    height: 120vh;
-  }*/
-}
-
-@keyframes up-down {
-  0% {
-    transform: translateY(10px);
-  }
-
-  100% {
-    transform: translateY(-10px);
-  }
-}
-
-/*--------------------------------------------------------------
-# Sections General
---------------------------------------------------------------*/
 section {
   padding: 60px 0;
-  overflow: hidden;
+  overflow: hidden
 }
 
 .section-bg {
-  background-color: #e0e7ea;
+  background-color: #e0e7ea
 }
 
 .section-title {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 30px
 }
 
 .section-title h2 {
@@ -585,41 +2287,26 @@ section {
   padding-bottom: 0;
   line-height: 1px;
   margin-bottom: 15px;
-  color: #c2b7b1;
+  color: #c2b7b1
 }
 
 .section-title p {
   padding-bottom: 15px;
   margin-bottom: 15px;
-  position: relative;
   font-size: 32px;
   font-weight: 700;
-  color: #4e4039;
+  color: #4e4039
 }
 
-.section-title p::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 60px;
-  height: 2px;
-  background: #eb5d1e;
-  bottom: 0;
-  left: calc(50% - 30px);
-}
-
-/*--------------------------------------------------------------
-# Breadcrumbs
---------------------------------------------------------------*/
 .breadcrumbs {
   padding: 15px 0;
   background-color: #fef5f1;
-  min-height: 40px;
+  min-height: 40px
 }
 
 .breadcrumbs h2 {
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 300
 }
 
 .breadcrumbs ol {
@@ -628,172 +2315,124 @@ section {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 14px;
+  font-size: 14px
 }
 
-.breadcrumbs ol li+li {
-  padding-left: 10px;
-}
-
-.breadcrumbs ol li+li::before {
-  display: inline-block;
-  padding-right: 10px;
-  color: #6c757d;
-  content: "/";
-}
-
-@media (max-width: 768px) {
+@media (max-width:768px) {
   .breadcrumbs .d-flex {
-    display: block !important;
+      display: block !important
   }
 
   .breadcrumbs ol {
-    display: block;
+      display: block
   }
 
   .breadcrumbs ol li {
-    display: inline-block;
+      display: inline-block
   }
 }
-
-/*--------------------------------------------------------------
-# About
---------------------------------------------------------------*/
 
 .anft i {
   font-size: 48px;
   margin-top: 15px;
-  color: #f39e7a;
+  color: #f39e7a
 }
 
-/*
-.anft p {
-  font-size: 15px;
-  color: #5a6570;
-}*/
-
-@media (max-width: 991px) {
+@media (max-width:991px) {
   .anft .about-img img {
-    max-width: 70%;
+      max-width: 70%
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width:767px) {
   .anft .about-img img {
-    max-width: 90%;
+      max-width: 90%
   }
 
   .aligncenter {
-    justify-content: center !important;
-    flex-wrap: wrap;
+      justify-content: center !important;
+      flex-wrap: wrap
   }
 }
 
-/*--------------------------------------------------------------
-# statistics
---------------------------------------------------------------*/
 .statistics .icon-box {
   padding: 30px;
   position: relative;
   overflow: hidden;
-  margin: 0 0 10px 0;
+  margin: 0 0 10px;
   background: var(--secondarycolor);
-  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
-  transition: all 0.3s ease-in-out;
+  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, .1);
+  transition: all .3s ease-in-out;
   border-radius: 8px;
   text-align: center;
   border-bottom: 3px solid #fff;
   width: 240px;
-  height: 160px;
+  height: 160px
 }
 
 .statistics .icon-box:hover {
   transform: translateY(-5px);
-  border-color: var(--primarycolor);
-}
-
-.statistics .icon i {
-  font-size: 48px;
-  line-height: 1;
-  margin-bottom: 15px;
-  color: var(--primarycolor);
+  border-color: var(--primarycolor)
 }
 
 .statistics .title {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 22px;
-  color: #ffbd00;
+  color: #ffbd00
 }
 
 .statistics .title a {
   color: #ffbd00;
-  font-size: 20px;
+  font-size: 20px
 }
 
 .statistics .description {
   font-size: 14px;
   line-height: 28px;
   margin-bottom: 0;
-  /*color: var(--secondarycolor);*/
-  color: #ffc727;
+  color: #ffc727
 }
-
-/* .icon-box{
-  background: #253237;
-  text-align: center;
-  color: #FFC727;
-  padding: 20px;
-  border-radius: 8px;
-} */
 
 #statistics .row {
   width: 60%;
-  margin: 0 auto;
-  margin-bottom: 20px;
+  margin: 0 auto 20px
 }
-
-/*--------------------------------------------------------------
-# Miners
---------------------------------------------------------------*/
 
 .miner-accord {
   width: 60%;
-  margin: 0 auto;
+  margin: 0 auto
 }
 
 #accordionExample .accordion-button {
   background-color: #fffaea;
-  font-size: 20px;
-  color: #253237;
+  font-size: 16px;
+  color: #253237
+}
+
+.accord-content,
+.stacklist {
+  border: 1px solid var(--primarycolor);
+  border-radius: 4px
 }
 
 .accord-content {
-  border: 1px solid var(--primarycolor);
-  border-radius: 4px;
   text-align: center;
-  padding: 30px;
+  padding: 30px
 }
 
 .accord-content span {
   color: var(--primarycolor);
-  font-size: 20px;
+  font-size: 20px
 }
 
 .accord-content p {
-  font-size: 20px;
+  font-size: 20px
 }
 
-/* .accordion-button:focus{
-  border-color: var(--primarycolor);
-} */
-
-/*stacklist*/
 .stacklist {
   margin-top: 20px;
-  padding: 0;
-  border: 1px solid var(--primarycolor);
-  border-radius: 4px;
+  padding: 0
 }
 
 .stacklist li {
@@ -804,24 +2443,25 @@ section {
   display: flex;
   font-size: 18px;
   justify-content: space-between;
-  padding: 15px 10px;
+  padding: 15px 10px
 }
 
 .stacklist li label {
   color: #253237;
   font-size: 18px;
   font-weight: 500;
-  margin: 0;
+  margin: 0
 }
 
+.mineraccordian .minerlist li span,
 .stacklist li span {
   color: #253237;
   font-weight: 700;
-  text-align: right;
+  text-align: right
 }
 
 .ybbtndiv {
-  text-align: center;
+  text-align: center
 }
 
 .startstackingbtn {
@@ -835,14 +2475,11 @@ section {
   margin-top: 15px;
   padding: 17px;
   width: 100%;
-  border: unset;
+  border: unset
 }
 
-/*--------------------------------------------------------------
-# how-it-work
---------------------------------------------------------------*/
 #how-it-work {
-  background-color: #fff;
+  background-color: #fff
 }
 
 .how-works {
@@ -851,15 +2488,14 @@ section {
   position: relative;
   background-color: var(--main-bg-color);
   border-radius: 8px;
-  padding: 10px;
+  padding: 10px
 }
 
 .how-works p {
   margin-left: 40px;
-  /*margin-top: 15px;*/
   font-size: 18px;
   color: #253237;
-  font-weight: 600;
+  font-weight: 600
 }
 
 .how-works span {
@@ -869,63 +2505,38 @@ section {
   background-color: var(--primarycolor);
   left: -4%;
   border-radius: 50px;
-  /*text-align: center;*/
   padding: 10px;
-
-  display: flex;
   justify-content: center;
-  align-items: center;
-  color: #000000;
+  color: #000;
   font-size: 30px;
-  font-weight: 500;
+  font-weight: 500
 }
 
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
+#footer,
+.aligncenter,
+.how-works span {
+  display: flex;
+  align-items: center
+}
+
 #footer {
   background: #4f6b75;
-  /*padding: 0 0 30px 0;*/
   color: #fff;
   font-size: 14px;
-  display: flex;
-  align-items: center;
-  padding: 30px;
+  padding: 30px
 }
 
 #footer .footer-top .footer-links {
-  margin-bottom: 30px;
-}
-
-#footer .footer-top .footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#footer .footer-top .footer-links ul i {
-  padding-right: 2px;
-  color: #ffffff;
-  font-size: 18px;
-  line-height: 1;
-}
-
-#footer .footer-top .footer-links ul li {
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
+  margin-bottom: 30px
 }
 
 .aligncenter {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between
 }
 
 .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  /*background: var(--primarycolor);*/
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -934,345 +2545,291 @@ section {
   text-align: center;
   width: 36px;
   height: 36px;
-  transition: 0.3s;
+  transition: .3s
 }
 
-.footer-top .social-links a:hover {
-  background: var(--primarycolor);
-  /*color: #fff;*/
-  color: var(--secondarycolor) !important;
-  text-decoration: none;
-}
-
-#footer .copyright {
+#footer .copyright,
+#footer .credits {
   text-align: center;
-  float: left;
+  float: left
 }
 
 #footer .credits {
   float: right;
-  text-align: center;
   font-size: 13px;
-  color: #212529;
+  color: #212529
 }
 
-#footer .credits a {
-  color: var(--primarycolor);
-}
-
-@media (max-width: 575px) {
+@media (max-width:575px) {
 
   #footer .copyright,
   #footer .credits {
-    float: none;
-    -moz-text-align-last: center;
-    text-align-last: center;
-    padding: 3px 0;
+      float: none;
+      -moz-text-align-last: center;
+      text-align-last: center;
+      padding: 3px 0
   }
-}
 
-/*--------------------------------------------------------------
-# mobile
---------------------------------------------------------------*/
-
-@media (max-width: 575px) {
+  #statistics .row,
   .miner-accord {
-    width: 100%;
-    margin: 0 auto;
+      width: 100%;
+      margin: 0 auto
   }
 
   .how-works {
-    width: 95%;
-  }
-
-  #statistics .row {
-    width: 100%;
-    margin: 0 auto;
+      width: 95%
   }
 
   .statistics .icon-box {
-    padding: 30px;
-    position: relative;
-    overflow: hidden;
-    margin: 0 auto 30px;
-    /*background: #fff;*/
-    background: #253237;
-    box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
-    transition: all 0.3s ease-in-out;
-    border-radius: 8px;
-    text-align: center;
-    border-bottom: 3px solid #fff;
-    width: 240px;
-    height: 140px;
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto 30px;
+      background: #253237;
+      box-shadow: 0 10px 29px 0 rgba(68, 88, 144, .1);
+      transition: all .3s ease-in-out;
+      border-radius: 8px;
+      text-align: center;
+      border-bottom: 3px solid #fff;
+      width: 240px;
+      height: 140px
   }
 
   h3 {
-    font-weight: 700;
-    font-size: 24px;
-    color: var(--secondarycolor);
+      font-size: 24px;
+      color: var(--secondarycolor)
   }
 
   h6 {
-    font-size: 20px;
+      font-size: 20px
   }
 
   .anft img {
-    width: 80%;
+      width: 80%
   }
 
+  #home h2,
+  #home h3,
   .home-btn {
-    text-align: center;
+      text-align: center
   }
 
-  /*  #home {
-    height: 100vh;
-  }*/
+  #home h2,
+  h3 {
+      font-weight: 700
+  }
 
   #home h2 {
-    margin: 0;
-    font-size: 34px;
-    font-weight: 700;
-    line-height: 56px;
-    text-align: center;
+      margin: 0;
+      font-size: 34px;
+      line-height: 56px
   }
 
   #home h3 {
-    margin: 15px 0 0 0;
-    font-size: 16px;
-    color: var(--secondarycolor);
-    font-weight: 500;
-    text-align: center;
+      margin: 15px 0 0;
+      font-size: 16px;
+      color: var(--secondarycolor);
+      font-weight: 500
   }
 
   .callogbtn {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center
   }
 
   .calcell,
   .respmb {
-    margin-bottom: 20px;
+      margin-bottom: 20px
+  }
+
+  #footer {
+      padding: 0
   }
 
   section {
-    padding: 40px 0;
+      padding: 40px 0
   }
-
-  /* #home h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-
-  #home h2 {
-    font-size: 18px;
-    line-height: 24px;
-  }
-
-  #home .hero-img img {
-    width: 70%;
-  } */
 }
 
 .calculator-bg {
   background-color: #4f6b75;
   padding: 30px;
+  border-radius: 8px
 }
 
 .calculatorSec {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between
 }
 
-.calcell {
+.calcell,
+.calculatorBtn,
+.calculatorBtn:hover {
   font-size: 32px;
-  color: #ffffff;
+  color: #fff;
   display: flex;
   align-items: center;
   gap: 10px;
-  border: 1px solid #ffffff;
+  border: 1px solid #fff;
   padding: 15px;
   border-radius: 8px;
-  justify-content: center;
-  width: 280px;
+  justify-content: center
 }
 
-.calcell span {
-  font-size: 12px;
+.calcell span,
+.minerspectable th {
+  font-size: 12px
 }
 
-.calculatorBtn {
+.calculatorBtn,
+.calculatorBtn:hover {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  font-size: 16px;
   letter-spacing: 1px;
   display: inline-block;
-  font-size: 32px;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  border: 1px solid #ffffff;
-  padding: 15px;
-  border-radius: 8px;
-  justify-content: center;
-  width: 280px;
+  border: 1px solid #ffc727;
   padding: 12px 20px;
-  border-radius: 3px;
-  transition: 0.5s;
+  transition: .5s;
   color: #253237;
   background: #ffc727;
-  /*width: 200px;*/
-  text-align: center;
+  text-align: center
 }
 
 .calculatorBtn img {
-  margin-right: 10px;
+  margin-right: 10px
 }
 
-.anftp,
-.aboutp {
-  font-size: 24px;
-  color: #253237;
+.aboutp,
+.anftp {
+  font-size: 20px;
+  color: #253237
 }
-
-/************* Available Miner *************/
 
 .minerAvailableCard {
   background-color: #f5f5f5;
   padding: 15px;
   border-radius: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 20px
 }
 
 .minerAvailableTitle {
   font-size: 16px;
   text-align: center;
-  color: #253237;
+  color: #253237
 }
 
 .minerAvailableTitle span {
-  font-weight: 600;
+  font-weight: 600
 }
 
-.minerAvailableImage {
+.minerAvailableImage,
+.minerAvailablebtn {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 150px;
+  justify-content: center
 }
 
-.minerAvailableImage .img-fluid{
-  max-width: 85%;
-  height: 100%;
-  object-fit: contain;
-}
-.detailCard .minerAvailableImage .img-fluid{
+.detailCard .minerAvailableImage .img-fluid {
   min-width: 150px;
   max-width: 300px;
   height: auto;
   object-fit: contain;
 }
 
+
 .minerAvailablebtn {
   width: 100%;
-  display: flex;
   padding: 5px;
   border: 1px solid #ddd;
-  justify-content: center;
   color: #000;
-  margin-top: 10px;
+  margin-top: 10px
 }
 
 .minerAvailablebtn:hover {
-  cursor: pointer;
-  /*color: #000;*/
+  cursor: pointer
 }
 
-/************* footer **********/
-
 .footerimg {
-  width: 32px;
-  text-align: center;
+  width: 32px
 }
 
 .footerlist {
   display: flex;
   gap: 5px;
-  font-size: 16px;
+  font-size: 16px
 }
 
 #bottomFooter {
-  background: var(--secondarycolor);
+  background: var(--secondarycolor)
 }
 
 .bottomFooterp {
   font-size: 12px;
   color: #a0aec0;
   padding: 18px;
-  margin: 0;
+  margin: 0
 }
 
 .social-links {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: center
 }
 
-/************ Pages **************/
 .darksec-bg {
-  background-color: #4f6b75;
+  background-color: #4f6b75
 }
 
 .lightblue-bg {
-  background-color: #d4e2e7;
+  background-color: #e0e7ea
 }
 
 .lightgrey-bg {
-  background-color: #eeeeee;
+  background-color: #eee
 }
 
 .dimgrey-bg {
-  background-color: #f5f5f5;
+  background-color: #f5f5f5
 }
 
 .secpadding {
-  padding: 20px;
+  padding: 15px
 }
 
 .brtlr,
 .detailCard.brtlr {
-  border-radius: 8px 8px 0px 0px;
-}
-
-.brrr {
-  border-radius: 8px;
+  border-radius: 8px 8px 0 0
 }
 
 .brblr {
-  border-radius: 0px 0px 8px 8px;
+  border-radius: 0 0 8px 8px
 }
 
 .brrtb {
-  border-radius: 0px 8px 8px 0px !important;
+  border-radius: 0 8px 8px 0 !important
 }
 
 .brltb {
-  border-radius: 8px 0px 0px 8px !important;
+  border-radius: 8px 0 0 8px !important
 }
 
 .navbar .disconnetbtn,
-.navbar .disconnetbtn:focus {
+.navbar .disconnetbtn:focus,
+.navbar .disconnetbtn:hover {
   padding: 5px 25px;
   border-radius: 8px;
-  color: #ffffff;
-  background-color: #4f6b75;
+  color: #fff;
+  background-color: #4f6b75
+}
+
+.navbar .disconnetbtn:hover {
+  cursor: pointer
 }
 
 .btn-bg-yellow {
   height: 37px;
-  padding: 0px 10px;
+  padding: 0 10px;
   min-width: 132px;
   border-radius: 8px;
   display: flex;
@@ -1282,150 +2839,146 @@ section {
   color: #253237;
   background-color: #ffc727;
   float: right;
-  text-align: center;
+  text-align: center
 }
 
 .btn-bg-yellow:hover {
-  color: #253237;
+  color: #253237
 }
 
 .home-btn {
   max-width: 428px;
-  margin-top: 24px;
+  margin-top: 24px
 }
 
 .logsignsec {
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 8px
 }
 
-.mainsection {
+.mainsection,
+.mobileheader {
   max-width: 600px;
-  margin: auto;
+  margin: auto
 }
 
 .connectto {
-  padding: 12px;
+  padding: 10px;
   border: 1px solid #4f6b75;
   border-radius: 8px;
-  text-align: center;
-}
-
-.connectto .concon {
-  margin-bottom: 5px;
+  text-align: center
 }
 
 .text1 {
-  font-size: 14px;
-  color: var(--secondarycolor);
+  font-size: 12px;
+  color: var(--secondarycolor)
 }
 
 .text2 {
   font-size: 12px;
-  color: #2d3748;
+  color: #2d3748
 }
 
 .walletsecp {
-  font-size: 12px;
-  color: #778391;
+  font-size: 10px;
+  color: #a0aec0
 }
 
-.walletsecp2,
-.selectcuramt {
-  font-size: 18px;
+.selectcuramt,
+.walletsecp2 {
+  font-size: 14px;
   color: var(--secondarycolor);
-  font-weight: 700;
+  font-weight: 700
 }
 
 .minertabsec ul li {
-  width: 25%;
+  width: 25%
 }
 
 .minertabsec .nav-link.typetabbtn,
 .wallettabsec .nav-link.typetabbtn {
-  border: 1px solid #eeeeee;
-  background: white;
+  border: 1px solid #eee;
+  background: #fff;
   color: var(--secondarycolor);
   border-radius: unset;
   width: 100%;
-  font-weight: 500;
+  font-weight: 500
 }
 
 .minertabsec .nav-link.typetabbtn.active,
 .wallettabsec .nav-link.typetabbtn.active {
   color: var(--secondarycolor);
-  background: var(--primarycolor);
+  background: var(--primarycolor)
+}
+
+.backbtn i,
+.backbtnsec {
+  display: flex;
+  align-items: center
 }
 
 .backbtnsec {
-  display: flex;
   justify-content: space-between;
-  align-items: center;
   color: #4f6b75;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 700
 }
 
-.backbtn {
+.backbtn,
+.backbtn:hover {
   display: flex;
   gap: 5px;
   color: #4f6b75;
-  align-items: center;
-  z-index: 1000;
+  align-items: center
 }
 
 .backbtn i {
   height: 25px;
-  display: flex;
   width: 25px;
-  align-items: center;
   justify-content: center;
   font-size: 25px;
   border-radius: 50%;
   background-color: #4f6b75;
-  color: #ffffff;
+  color: #fff
 }
 
 .detailCard {
-  background-color: #ffffff;
-  border-radius: 8px;
+  background-color: #fff;
+  border-radius: 8px
 }
 
 .headingtext2 {
   font-size: 20px;
   font-weight: 700;
   color: var(--secondarycolor);
-  margin-bottom: 10px;
+  margin-bottom: 10px
+}
+
+.btn-color-primary,
+.btn-color-primary:hover,
+.btn-outline-color-secondary,
+.btn-outline-color-secondary:hover {
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 12px;
+  display: flex;
+  color: var(--secondarycolor);
+  justify-content: center;
+  align-items: center
 }
 
 .btn-color-primary,
 .btn-color-primary:hover {
-  padding: 15px 0px;
-  text-align: center;
-  background-color: var(--primarycolor);
-  border-radius: 6px;
-  font-weight: 700;
-  font-size: 12px;
-  display: flex;
-  color: var(--secondarycolor);
-  justify-content: center;
-  align-items: center;
+  background-color: var(--primarycolor)
 }
 
 .btn-outline-color-secondary,
 .btn-outline-color-secondary:hover {
-  padding: 15px 0px;
-  text-align: center;
-  background-color: #ffffff;
-  border-radius: 6px;
-  font-weight: 700;
-  font-size: 12px;
-  display: flex;
-  color: var(--secondarycolor);
-  justify-content: center;
-  align-items: center;
+  background-color: #fff;
   border: 1px solid var(--secondarycolor);
-  gap: 5px;
+  gap: 5px
 }
 
 .btn-outline-grey,
@@ -1434,59 +2987,53 @@ section {
   border: 1px solid #dddd;
   border-radius: 5px;
   color: #253237;
-  text-align: center;
+  text-align: center
 }
 
 .btn-outline-grey:hover {
-  cursor: pointer;
+  cursor: pointer
 }
 
 .minerspectable .lightblue-cell-bg {
-  background-color: #c1cfd5;
-}
-
-.minerspectable th {
-  font-size: 12px;
+  background-color: #c1cfd5
 }
 
 .minerspectable th span,
 .selectcurpricep {
   font-size: 10px;
-  font-weight: 400;
+  font-weight: 400
 }
 
 .minerspectable td {
   font-size: 16px;
-  color: #000000;
-  padding: 0.5rem 0.5rem;
+  color: #000
 }
 
-.minerspectable td.green,
-.greentext {
-  color: #36b37e;
+.greentext,
+.minerspectable td.green {
+  color: #36b37e
 }
 
 .minerspectable td.red,
 .redtext {
-  color: #ff0000;
+  color: red
 }
 
 .yellowtext {
-  color: #ffc727;
+  color: #ffc727
 }
-
-/********** Select Currency ************/
 
 .selectcurrow,
 .selectedminer,
 .wallettokenrow {
   border: 1px solid #e4e5e5;
   border-radius: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 20px
 }
 
+#accordionExample .accordion-button.mineraccordianbtn,
 .selectedminer {
-  background-color: #ffffff;
+  background-color: #fff
 }
 
 .selectcurrowcontent,
@@ -1494,121 +3041,93 @@ section {
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  align-items: center;
+  align-items: center
 }
 
 .selectcurrowcontent.darksec-bg {
   background-color: #4f6b75;
-  color: #ffffff;
+  color: #fff;
   border: 1px solid #4f6b75;
-  border-radius: 8px;
+  border-radius: 8px
 }
 
 .selectcurrowcontent.darksec-bg .selectcuramt {
-  color: #ffffff;
+  color: #fff
 }
 
 .selectcurimgside {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 10px
 }
 
 .selectcurfocused {
   display: flex;
   justify-content: space-between;
   background-color: #e0e7ea;
-  border-radius: 0px 0px 8px 8px;
-  padding: 5px 10px;
+  border-radius: 0 0 8px 8px;
+  padding: 5px 10px
 }
 
 .selectcurpricep span {
-  margin-left: 5px;
+  margin-left: 5px
 }
 
 .selectcurbtnsec {
   display: flex;
-  gap: 30px;
+  gap: 30px
 }
 
-.selectcurbtnsec a {
-  width: 50%;
-}
-
-.selectcurbtnsec button {
-  width: 50%;
-}
-
-.selectcurbtnsec .apbtn:disabled {
-  background: #dcdbdb;
-  border: 1px solid #d2cece;
-  color: #b2b0b0;
-}
-
-.selectcurbtnsec .paybtn:disabled {
-  border: 0px;
-  background: #ffda6e;
-  color: #b2b0b0;
+.selectcurbtnsec a,
+.transictionconfirmsec a,
+.wallettabsec ul li {
+  width: 50%
 }
 
 .minerimg {
-  width: 60px;
+  width: 60px
 }
 
-.awaitingconfirmsec,
+.awaitingconfirmsec {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  text-align: center;
+}
+
 .transictionconfirmsec {
   text-align: center;
-  background-color: #ffffff;
-  padding: 40px;
+  background-color: #fff;
+  padding: 40px
 }
 
 .transictionconfirmsec {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-}
-
-.transictionconfirmsec a {
-  width: 50%;
-}
-
-/***************** Miner Accordian *************/
-
-#accordionExample .accordion-button.mineraccordianbtn {
-  background-color: #ffffff;
+  align-items: center
 }
 
 .mineraccordianbtn {
-  gap: 25%;
-  border-radius: 8px 8px 0px 0px;
-}
-
-.mineraccordianbtn:after {
-  background-image: url("./images/accordian-btn-icon.svg");
-  width: 12px;
-  height: 8px;
-  background-size: contain;
-}
-
-.mineraccordianbtn:not(.collapsed)::after {
-  background-image: url("./images/accordian-btn-icon.svg");
-  transform: rotate(180deg);
+  gap: 25%
 }
 
 .mineraccordianbtn.collapsed {
-  border-radius: 8px;
+  border-radius: 8px
 }
 
-.mineraccordian .minerlist,
-.mineraccordian .mineraccordianbody {
+.mineraccordian .mineraccordianbody,
+.mineraccordian .minerlist {
   padding: 0;
-  margin: 0;
+  margin: 0
 }
 
 .mineraccordianitem {
   margin-bottom: 20px;
-  border-radius: 8px;
+  border-radius: 8px
 }
 
 .mineraccordian .minerlist li {
@@ -1620,140 +3139,123 @@ section {
   font-size: 12px;
   justify-content: space-between;
   padding: 15px 10px;
-  width: 100%;
+  width: 100%
 }
 
 .mineraccordian .minerlist li label {
   color: #253237;
   font-size: 12px;
   font-weight: 500;
-  margin: 0;
+  margin: 0
 }
-
-.mineraccordian .minerlist li span {
-  color: #253237;
-  font-weight: 700;
-  text-align: right;
-}
-
-/************** Wallet ************/
 
 .sendreceivesec {
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 8px
 }
 
 .walletamtp {
   font-size: 40px;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
   font-weight: 500;
-  margin: 10px 0px 25px 0px;
+  margin: 20px 0 40px
 }
 
 .walletamtp2 {
   text-align: center;
   font-size: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 20px
 }
 
-.sendbtn,
 .receivebtn,
-.sendbtn:hover,
-.receivebtn:hover {
-  padding: 15px;
+.receivebtn:hover,
+.sendbtn,
+.sendbtn:hover {
+  padding: 10px;
   background-color: #e0e7ea;
   color: #3a4e56;
-  border: 1px solid #4f6b75;
-}
-
-.wallettabsec ul li {
-  width: 50%;
+  border: 1px solid #4f6b75
 }
 
 .wallettabsec .nav-link.typetabbtn {
-  padding: 6px 0px;
+  padding: 5px 0
 }
 
 .wallettokenrow {
-  background-color: #ffffff;
+  background-color: #fff
 }
 
-.tranheadp,
-.trandelp {
+.tranheadp {
   font-size: 20px;
-  color: #000000;
-  font-weight: 500;
+  color: #000;
+  font-weight: 500
 }
 
+.featurebtn p,
 .trandelp {
+  font-weight: 500;
   font-size: 16px;
-  color: #253237;
+  color: #253237
 }
-
-/************ Send *********/
 
 .inputdetailp {
   background-color: #e0e7ea;
   padding: 20px;
   border-radius: 8px;
   font-size: 14px;
-  color: #4f6b75;
+  color: #4f6b75
 }
 
 .backheadmed {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
   display: flex;
-  justify-content: center;
-  gap: 5px;
   font-size: 20px;
   font-weight: 500;
+  gap: 5px;
+  justify-content: center;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 100%;
 }
-
-/********** Receive *************/
 
 .barcodeimg {
   text-align: center;
   width: 85%;
-  margin: auto;
+  margin: auto
 }
 
 .copysharegroup {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 40px
 }
 
 .barcodenop {
   text-align: center;
-  color: #000000;
+  color: #000;
   font-weight: 500;
   font-size: 18px;
-  word-wrap: break-word;
+  word-wrap: break-word
 }
 
 .featurebtn p {
   color: #4f6b75;
   font-weight: 600;
-  font-size: 16px;
+  text-align: center
 }
 
 .featureimg {
   padding: 10px;
   background-color: var(--primarycolor);
-  border-radius: 100px;
+  border-radius: 100px
 }
-
-/************ Transaction type ****************/
 
 .transctionamtp {
   font-size: 36px;
   color: #ff5656;
-  text-align: center;
+  text-align: center
 }
 
 .singleDetail {
@@ -1762,78 +3264,78 @@ section {
   align-items: center;
   padding: 15px;
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: #fff;
   color: #4f6b75;
-  flex-wrap: wrap;
+  flex-wrap: wrap
 }
 
 .wordbreak {
-  word-break: break-word;
+  word-break: break-word
 }
 
-.swapcurimg,
-.collectearnimg {
-  width: 34px;
+.collectearnimg,
+.swapcurimg {
+  width: 34px
 }
 
 .swapiconrow {
   display: flex;
   gap: 5px;
-  align-items: center;
+  align-items: center
 }
 
 .swapdel p {
-  margin: 0px;
+  margin: 0
 }
 
 .arrowdownimg {
-  margin-left: 45px;
+  margin-left: 45px
 }
 
-/************** Refer ************/
-
 .borderbottom {
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0
+}
+
+.referinvitep {
+  text-align: center;
+  color: #fff
 }
 
 .refertilerow {
   display: flex;
-  gap: 30px;
+  gap: 30px
 }
 
-.refertilerow .refertile {
-  width: 50%;
+.refertilerow .refertile,
+.reftablesec .downlinepertable,
+.reftablesec .rankpertable {
+  width: 50%
 }
 
 .refertile {
   padding: 15px;
   text-align: center;
   border-radius: 8px;
-  background-color: #ffffff;
-  margin-bottom: 20px;
+  background-color: #fff;
+  margin-bottom: 20px
 }
 
 .tilesphead {
   color: #2c3356;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 600
 }
 
 .tilespdel {
   font-size: 20px;
   color: #4f6b75;
-  font-weight: 700;
+  font-weight: 700
 }
 
 .reftablesec {
   display: flex;
   justify-content: space-between;
-  gap: 30px;
-}
-
-.reftablesec .rankpertable,
-.reftablesec .downlinepertable {
-  width: 50%;
+  gap: 30px
 }
 
 .tablebg1,
@@ -1845,100 +3347,90 @@ section {
   font-size: 12px;
   padding: 10px;
   font-weight: 700;
-  color: #000000;
+  color: #000
 }
 
 .tablebg1.active,
 .tablebg2.active,
 .tablebg3.active,
 .tablebg4.active {
-  background-color: var(--primarycolor);
+  background-color: var(--primarycolor)
 }
 
 .downlinepertable table,
 .rankpertable table {
-  border-color: #ffffff;
+  border-color: #fff
 }
 
 .tablebg1 {
-  background-color: #c1cfd5;
+  background-color: #c1cfd5
 }
 
 .tablebg2 {
-  background-color: #e0e7ea;
+  background-color: #e0e7ea
 }
 
 .tablebg3 {
-  background-color: #ececec;
+  background-color: #ececec
 }
 
 .accordion-button.colearnaccobtn:after {
-  display: none;
+  display: none
 }
 
 .accordion-button.colearnaccobtn {
-  justify-content: space-between;
+  justify-content: space-between
 }
 
-.accordion-button.colearnaccobtn .colearndel img {
-  transition: transform 0.2s ease-in-out;
-}
-
-.accordion-button.colearnaccobtn:not(.collapsed) .colearndel img {
-  transform: rotate(180deg);
-}
-
-.colearnicon,
-.colearndel {
+.colearndel,
+.colearnicon {
   display: flex;
   gap: 10px;
-  align-items: center;
+  align-items: center
 }
 
 .colearniconp,
 .colearnp {
   font-size: 16px;
   color: #253237;
-  font-weight: 700;
+  font-weight: 700
 }
 
 .colearnp2 {
   font-size: 10px;
   font-weight: 400;
-  text-align: end;
+  text-align: end
 }
 
 .darktrbg {
-  background-color: #648795;
+  background-color: #648795
 }
 
 .lightdarkbg {
-  background-color: #e0e7ea;
+  background-color: #e0e7ea
 }
 
 .whitebg {
-  background-color: #ffffff;
+  background-color: #fff
 }
 
 .rankbonustable table {
-  border: 2px solid #f5f5f5;
+  border: 2px solid #f5f5f5
 }
 
-.whitebg.active,
-.lightdarkbg.active {
-  background-color: var(--primarycolor);
+.lightdarkbg.active,
+.whitebg.active {
+  background-color: var(--primarycolor)
 }
 
-.whitebg,
+.darktrbg,
 .lightdarkbg,
-.darktrbg {
+.whitebg {
   text-align: center;
   font-size: 14px;
   font-weight: 700;
-  color: #000000;
+  color: #000
 }
-
-/*********** Stats ********/
 
 .bardelshowp {
   border: 1px solid #c1cfd5;
@@ -1950,1578 +3442,1356 @@ section {
   justify-content: center;
   align-items: center;
   display: flex;
-  gap: 10px;
+  gap: 10px
 }
 
 .miningcapacitytype,
 .unitsoldtype {
-  display: none;
+  display: none
 }
 
 .primarybardot,
 .secondarybardot,
 .sfirstbg,
 .ssecbg,
-.sthirdbg {
+.sthirdbg,
+.otherbardot {
   height: 16px;
   width: 16px;
   border-radius: 50%;
-  background-color: var(--primarycolor);
+  background-color: var(--primarycolor)
 }
 
 .secondarybardot {
-  background-color: #4f6b75;
+  background-color: #4f6b75
+}
+
+.otherbardot {
+  background-color: #FFE18C;
 }
 
 .sfirstbg {
-  background-color: #fff6dc;
+  background-color: #fff6dc
 }
 
 .ssecbg {
-  background-color: #ffe18c;
+  background-color: #ffe18c
 }
 
 .sthirdbg {
-  background-color: #ebae00;
+  background-color: #ebae00
 }
 
-/************** Loader Animation *********/
+.downlinedetail,
+.downlinesec {
+  border-radius: 8px;
+  box-shadow: 0 0 3px 0#3b4e5266
+}
 
-@keyframes loader {
-  0% {
-    transform: rotate(0deg);
-  }
+.downlinedetail {
+  max-width: 600px
+}
 
-  100% {
-    transform: rotate(360deg);
-  }
+.downlinedelsec {
+  background-color: #fff
+}
+
+.downlinedata {
+  display: flex;
+  justify-content: space-between
+}
+
+.exploreback a {
+  color: #3b4e52;
+  font-size: 20px
+}
+
+.yourdownline {
+  background-color: #eff3f4;
+  overflow: scroll;
+  border-radius: 8px
+}
+
+.downlinerow {
+  margin-bottom: 20px
+}
+
+.downlineaccordion {
+  cursor: pointer;
+  display: flex;
+  align-items: center
+}
+
+.downlineicon {
+  margin-right: 10px;
+  min-height: 30px;
+  min-width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4f6b75;
+  color: #fff
+}
+
+.downlinecontent {
+  display: none;
+  margin-left: 40px;
+  margin-top: 10px
+}
+
+.downlineactive {
+  display: block
+}
+
+.downlinep,
+.downlinep span {
+  display: flex;
+  align-items: center
+}
+
+.downlinep {
+  background-color: #fff;
+  padding: 10px;
+  gap: 40px;
+  justify-content: space-between
+}
+
+.downlinep span {
+  height: 20px;
+  width: 20px;
+  justify-content: center;
+  background-color: var(--primarycolor);
+  color: #000;
+  font-size: 12px
 }
 
 .loader-image {
-  animation: loader 2s linear infinite;
+  animation: loader 2s linear infinite
 }
 
-/*************** Media Queries **************/
-
-@media (max-width: 520px) {
+@media (max-width:520px) {
   #header {
-    margin: 10px 0px;
+      margin: 10px;
+      height: 50px
   }
 
   #header .logo img {
-    max-height: 20px;
+      max-height: 20px
   }
 
   .tabimg {
-    width: 12px;
+      width: 12px
   }
 
+  .logsignsec,
   .mainsection,
-  .secpadding,
-  .logsignsec {
-    padding: 10px;
+  .secpadding {
+      padding: 10px
   }
 
-  .anftp,
-  .aboutp {
-    font-size: 20px;
+  .aboutp,
+  .anftp {
+      font-size: 20px
   }
 
   .how-works span {
-    height: 30px;
-    width: 30px;
-    font-size: 20px;
+      height: 30px;
+      width: 30px;
+      font-size: 20px
   }
 
   .navbar .disconnetbtn,
   .navbar .disconnetbtn:focus {
-    padding: 5px 15px;
+      padding: 5px 15px
+  }
+
+  .footerlist {
+      width: 50%;
+      transform: translate(50%, 50%)
   }
 
   .footerlist,
   .navbar .disconnetbtn,
   .navbar .disconnetbtn:focus {
-    font-size: 12px;
+      font-size: 12px
   }
 
   .minertabsec .nav-link.typetabbtn {
-    padding: 11px 0px;
-    font-size: 10px;
+      padding: 11px 0;
+      font-size: 10px
   }
 
-  .minerAvailablebtn {
-    font-size: 11px;
+  .manageaccorheadp {
+      font-size: 12px
   }
 
-  .headingtext2 {
-    font-size: 16px;
-  }
-
+  .minerAvailablebtn,
   .minerspectable td {
-    font-size: 10px;
+      font-size: 10px
   }
 
-  .walletsecp2,
-  .selectcuramt,
+  .exploreback a,
+  .headingtext2 {
+      font-size: 14px
+  }
+
   .backbtn,
   .backheadmed,
-  .minerAvailableTitle,
-  .trandelp,
-  .btn-bg-yellow,
+  .barcodenop,
   .calculatorBtn,
-  .tilespdel {
-    font-size: 14px;
+  .downlinep,
+  .featurebtn p,
+  .form-select,
+  .lifetimep,
+  .selectcuramt,
+  .text1,
+  .trandelp,
+  .walletsecp2 {
+      font-size: 12px
   }
 
   .btn-outline-grey,
   .btn-outline-grey:hover {
-    padding: 5px 10px;
-    font-size: 12px;
+      padding: 5px 10px;
+      font-size: 12px
   }
 
-  .curicondel {
-    font-size: 12px;
+  .curicondel,
+  .rankbonustable tr,
+  .walletamtsec p.text-white,
+  select#selectOption {
+      font-size: 12px
   }
 
   .footersocialicon {
-    width: 25px;
+      width: 25px
   }
 
   .minerimg {
-    width: 40px;
+      width: 40px
   }
 
-  .connectto p {
-    word-wrap: break-word;
+  .bardelshowp,
+  .btn-bg-yellow,
+  .btn-color-primary,
+  .btn-color-primary:hover,
+  .btn-outline-color-secondary,
+  .btn-outline-color-secondary:hover,
+  .connectto p,
+  .minerAvailableTitle,
+  .referinvitep,
+  .text2,
+  .tilespdel,
+  .tilesphead {
+      font-size: 10px
   }
 
   .minerspectable th span,
   .selectcurpricep {
-    font-size: 8px;
+      font-size: 8px
   }
 
   .social-links {
-    justify-content: space-between;
+      justify-content: space-around;
+      background-color: #3a4e56;
+      padding: 10px
   }
 
   .btn-color-primary,
   .btn-color-primary:hover,
   .btn-outline-color-secondary,
   .btn-outline-color-secondary:hover {
-    padding: 10px 0px;
+      padding: 5px 0
   }
 
   .calcell,
-  .calculatorBtn {
-    width: 100%;
+  .calculatorBtn,
+  .reftablesec .downlinepertable,
+  .reftablesec .rankpertable {
+      width: 100%
   }
 
-  .selectcurbtnsec,
   .refertilerow,
-  .reftablesec {
-    gap: 15px;
+  .reftablesec,
+  .selectcurbtnsec {
+      gap: 15px
   }
 
   .transctionamtp {
-    font-size: 28px;
-    text-align: center;
+      font-size: 28px;
+      text-align: center
   }
 
-  .reftablesec th {
-    font-size: 11px;
+  .downlinedata,
+  .reftablesec {
+      flex-wrap: wrap
   }
 
-  .tablebg1,
-  .tablebg2,
-  .tablebg3,
-  .tablebg4 {
-    width: 50%;
+  .downlinedata {
+      gap: 20px
   }
 
-  .reftablesec .rankpertable,
-  .reftablesec .downlinepertable {
-    width: 100%;
-  }
-}
-
-/* added */
-.referinvitep {
-  color: white;
-  text-align: center;
-  font-weight: 500;
-}
-
-/* ————————————————————–
-  Tree core styles
-*/
-.tree {
-  margin: 1em;
-  overflow: auto;
-  margin-left: 0;
-  padding-left: 13px;
-}
-
-.tree input {
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
-}
-
-.tree input~ul {
-  display: none;
-  padding-top: 1em;
-}
-
-.tree input:checked~ul {
-  display: block;
-}
-
-/* ————————————————————–
-  Tree rows
-*/
-.tree li {
-  line-height: 1.2;
-  position: relative;
-  padding: 0 0 1em 1em;
-  background-image: linear-gradient(#3b4e52 40%, rgba(255, 255, 255, 0) 0%);
-  background-position: left 7px;
-  background-size: 1px 13px;
-  background-repeat: repeat-y;
-}
-
-.tree li::marker {
-  color: #eff3f4;
-}
-
-.tree ul li {
-  padding: 0em 0px 1em 1em;
-}
-
-.tree>li:last-child {
-  padding-bottom: 0;
-}
-
-/* ————————————————————–
-  Tree labels
-*/
-.tree_label {
-  position: relative;
-  display: inline-block;
-  background: #fff;
-  padding: 5px 8px;
-  border-radius: 2px;
-  box-shadow: -17px 3px 0px 13px #eff3f4;
-}
-
-label.tree_label {
-  cursor: pointer;
-  min-width: 200px;
-}
-
-label.tree_label:hover {
-  color: #666;
-}
-
-/* ————————————————————–
-  Tree expanded icon
-*/
-label.tree_label:before {
-  background: #4f6b75;
-  color: #fff;
-  position: relative;
-  z-index: 1;
-  float: left;
-  margin: 0 1em 0 -34px;
-  width: 20px;
-  height: 20px;
-  content: "+";
-  text-align: center;
-  line-height: 20px;
-}
-
-:checked~label.tree_label:before {
-  content: "–";
-}
-
-:checked~label.tree_label {
-  content: "–";
-  box-shadow: unset;
-}
-
-/* ————————————————————–
-  Tree branches
-*/
-.tree li:before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -0.5em;
-  display: block;
-  width: 0;
-  content: "";
-}
-
-.tree li:last-child:before {
-  height: 1em;
-  bottom: auto;
-}
-
-.tree>li:last-child:before {
-  display: none;
-}
-
-.tree .salesspan {
-  float: right;
-  border-radius: 2px;
-  background: #ffc727;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 5px 10px;
-  display: inline-flex;
-}
-
-.farmmodal .modal-content {
-  padding: 0px;
-}
-
-.farmmodal .modal-body {
-  margin: 0px;
-  padding: 0px;
-}
-
-.farmmodal.modal-dialog {
-  max-width: 400px;
-}
-
-.treemodal .modal-content {
-  padding: 0px;
-}
-
-.treemodal .modal-body {
-  margin: 0px;
-  padding: 0px;
-}
-
-.treemodal.modal-dialog {
-  max-width: 600px;
-}
-
-.downlinecard {
-  max-width: 550px;
-}
-
-@media screen and (max-width: 770px) {
-  .downlinecard {
-    max-width: fit-content;
-  }
-}
-
-#card4 {
-  border-radius: 15px;
-  box-shadow: 0 3.499999761581421px 5.5px 0 #00000005;
-  height: 100%;
-  margin: 24px 24px 0;
-  padding-bottom: 0;
-  padding-left: 12px;
-  padding-right: 12px;
-  width: auto;
-}
-
-.text12 {
-  padding-top: 15px;
-  color: #2c3356;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 150%;
-  margin-bottom: 1rem;
-}
-
-.text5 {
-  color: #a0aec0;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.text6 {
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.brnone {
-  display: none;
-}
-
-@media screen and (max-width: 550px) {
-  .brnone {
-    display: block;
-  }
-}
-
-.earnedpsec {
-  padding: 18px 10px;
-}
-
-.earnedp {
-  color: #2d3748;
-  font-size: 12px;
-  line-height: 140%;
-  margin: 0;
-}
-
-.treebox {
-  background: rgb(255, 255, 255);
-  padding: 20px;
-  border-radius: 15px;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-}
-
-.wallet-lists img {
-  float: right;
-  height: 26px;
-}
-
-.wallet-lists {
-  list-style: none;
-  padding: 0px;
-  margin-bottom: 0px;
-}
-
-.wallet-lists li {
-  padding: 16px;
-  background: #eeeeee;
-  margin: 10px 0px;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-/* .footerdiv {
-  position: absolute;
-  width: 100%;
-  bottom: 0px;
-} */
-
-.connectmodalbg {
-  opacity: 0.8 !important;
-}
-
-.modal-content {
-  background-color: #e2e8f0 !important;
-  border-radius: 30px !important;
-  border: 0px;
-  padding: 10px 30px 30px 30px;
-}
-
-.modal-content {
-  border-radius: 15px;
-  background: #e2e8f0;
-}
-
-@media (max-width: 576px) {
-  .modal-content {
-    width: 100% !important;
-    margin-top: 15% !important;
-  }
-}
-
-.refmodal .modal-content {
-  padding: 0px;
-}
-
-.refmodal .modal-body {
-  margin: 0px;
-  padding: 0px;
-}
-
-@media (min-width: 576px) {
-  .modal-sm {
-    max-width: 391px;
-  }
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.content {
-  flex: 1;
-}
-
-.modalswap {
-  border-radius: 15px !important;
-}
-
-.blacktxtbtn .btn {
-  color: #000 !important;
-}
-
-.chartbx {
-  height: 67%;
-  background-color: #ffffff;
-  border-radius: 8px;
-}
-
-@media screen and (min-width: 450px) and (max-width: 500px) {
-  .chartbx {
-    height: 85%;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .chartbx {
-    height: 80%;
-  }
-}
-
-.chtable {
-  width: 70%;
-  margin: 0 auto;
-}
-
-.chbxhdiv {
-  height: 450px;
-}
-
-@media screen and (min-width: 1500px) and (max-width: 1950px) {
-  .chtable {
-    width: 90%;
-  }
-}
-
-@media screen and (min-width: 1120px) and (max-width: 1400px) {
-  .chtable {
-    width: 90%;
-  }
-}
-
-@media screen and (min-width: 1000px) and (max-width: 1120px) {
-  .chtable {
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 550px) and (max-width: 650px) {
-  .chtable {
-    width: 85%;
-  }
-
-  .prodtable {
-    width: 82vw;
-    margin: auto;
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .chtable {
-    width: 100%;
-  }
-
-  .chbxhdiv {
-    margin-bottom: 5px;
-  }
-
-  .prodtable {
-    width: 85vw;
-    margin: auto;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .mobnone {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .chbxhdiv {
-    height: 400px;
-  }
-
-  .tableitemx {
-    font-size: 13px;
-    padding: 15px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .chbxhdiv {
-    height: 350px;
-  }
-
-  .tableitemx {
-    font-size: 12px;
-    padding: 20px;
-  }
-}
-
-@media screen and (max-width: 370px) {
-  .chbxhdiv {
-    height: 300px;
-  }
-}
-
-@media screen and (max-width: 365px) {
-  .tableitemx {
-    font-size: 12px;
-    padding: 10px;
-  }
-}
-
-.pxx6 {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
-@media screen and (min-width: 768px) {
-  .pxx6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-
-.walletbtns {
-  width: 100%;
-  border: 0px;
-  background-color: transparent !important;
-  font-size: 10px;
-  font-family: Helvetica;
-  font-weight: 700;
-  box-shadow: unset;
-}
-
-.mainpill .typetabbtn {
-  font-weight: 600 !important;
-  font-size: 13px !important;
-}
-
-.pillmenuicon {
-  margin-right: 2px;
-}
-
-@media screen and (max-width: 610px) {
-  .mainsection {
-    padding: 0px !important;
-    margin: 0px 10px !important;
-  }
-
-  .connectto {
-    margin-bottom: 10px !important;
-  }
-
-  .walletamtsec {
-    margin-bottom: 10px !important;
-  }
-
-  .secpadding {
-    padding: 12px 20px !important;
-  }
-
-  .mobrefhr {
-    margin-top: 8px !important;
-  }
-
-  .secpadding .btn-bg-yellow {
-    height: 34px;
-    min-width: 100px;
-    font-size: 13px;
-  }
-
-  .secpadding .bnbvals {
-    font-size: 14px;
-  }
-
-  .mainpill .typetabbtn {
-    font-weight: 500 !important;
-    font-size: 12px !important;
-  }
-
-  .minerAvailableImage {
-    min-height: 150px;
-  }
-}
-
-@media screen and (max-width: 520px) {
-  .walletbtns {
-    padding: 3px;
-    font-size: 9px;
-  }
-
-  #header {
-    height: 55px;
-  }
-
-  .connectto {
-    padding: 8px !important;
-  }
-
-  .connectto p {
-    font-size: 13px !important;
-  }
-
-  .secpadding .bnbvals {
-    font-size: 12px;
+  .textend {
+      text-align: end
   }
 
   .walletsecp {
-    font-size: 11px !important;
-    text-align: center;
+      font-size: 10px
   }
 
-  .walletsecp2 {
-    font-size: 12px !important;
-    text-align: center;
+  #accordionExample .accordion-button.mineraccordianbtn,
+  .minerAvailableCard,
+  .refertile {
+      padding: 10px
   }
 
-  .secpadding .btn-bg-yellow {
-    height: 28px;
-    min-width: 85px;
-    font-size: 12px;
+  .mineraccordianbtn {
+      gap: 15%
   }
 
-  .mainpill .typetabbtn {
-    font-weight: 600 !important;
-    font-size: 11px !important;
+  hr {
+      margin: 10px 0
   }
 
-  .pillmenuicon {
-    height: 12px;
+  .colearniconp,
+  .colearnp {
+      font-size: 12px
   }
 
-  .minerAvailableImage {
-    min-height: 135px;
-    
-  }
-}
-
-@media screen and (max-width: 420px) {
-  .connectto p {
-    font-size: 11px !important;
+  .inputdetailp,
+  .wallettabsec .nav-link.typetabbtn {
+      padding: 10px 0;
+      font-size: 12px
   }
 
-  .mainpill .typetabbtn {
-    font-weight: 600 !important;
-    font-size: 11px !important;
-  }
-
-  .pillmenuicon {
-    margin-right: 0px;
-    height: 10px;
-  }
-
-  .secpadding {
-    padding: 12px 14px !important;
-  }
-
-  .minerAvailableImage {
-    min-height: 105px;
+  .inputdetailp {
+      padding: 10px
   }
 }
 
-@media screen and (max-width: 380px) {
-  .connectto p {
-    font-size: 11px !important;
-  }
-
-  .mainpill .typetabbtn {
-    font-weight: 600 !important;
-    font-size: 10px !important;
-  }
-
-  .pillmenuicon {
-    margin-right: 0px;
-    height: 10px;
-  }
+.w22 {
+  width: 22px
 }
 
-@media screen and (max-width: 350px) {
-  .connectto p {
-    font-size: 11px !important;
-  }
+.egoldcommunityitem {
+  margin-bottom: 15px
 }
 
-@media screen and (max-width: 450px) {
-  .egoldminertab {
-    display: grid !important;
-  }
+.egoldcommunitybtn {
+  padding: 0 20px 0 0;
+  background-color: #4f6b75
 }
 
-.quickstartbn {
+.egoldcommunitybtn:not(.collapsed) {
+  background-color: #4f6b75
+}
+
+.egoldaccordianimg {
+  padding: 15px;
+  background-color: var(--primarycolor)
+}
+
+.egoldcommunitybtnp {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding-left: 20px
+}
+
+.egoldaccordianimg img {
+  width: 36px;
+  height: 36px
+}
+
+.egoldcommunitybody {
+  padding: 20px;
+  background-color: #e0e7ea
+}
+
+.egoldcommbtns {
+  margin-top: 10px;
+  display: flex;
+  justify-content: end;
+  gap: 20px
+}
+
+.egoldcommbtns a {
+  color: #000
+}
+
+.tokenomicsrow {
+  border-radius: 16px
+}
+
+.tokenmicdel1 {
+  background-color: #a1b7c0
+}
+
+.tokenmicdel2 {
+  background-color: #c1cfd5
+}
+
+.tokenmicdel3 {
+  background-color: #e0e7ea
+}
+
+.tokenmicimg {
+  display: flex;
+  justify-content: center
+}
+
+.tokenmicdel1,
+.tokenmicdel2,
+.tokenmicdel3 {
+  padding: 20px
+}
+
+.tokenmicimgp,
+.tokenmicimgp2 {
+  font-size: 22px;
+  color: #4f6b75;
+  font-weight: 600;
+  text-align: center
+}
+
+.tokenmicimgp2 {
+  font-size: 20px;
+  font-weight: 400
+}
+
+.tokennumber {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 18px
+}
+
+.tokennum {
+  background-color: #4f6b75;
+  color: #fff;
+  height: 48px;
+  width: 48px;
+  align-items: center;
+  border-radius: 8px
+}
+
+.tokenicon,
+.tokenmicdelicon,
+.tokennum {
+  display: flex;
+  justify-content: center
+}
+
+.tokenicon {
+  height: 48px;
+  width: 48px;
+  background-color: #525252;
+  align-items: center;
+  border-radius: 8px
+}
+
+.tokenmicdelicon {
+  gap: 25px;
+  margin-top: 18px
+}
+
+.tokenomicsp {
+  padding: 30px;
+  font-size: 14px;
+  color: #253237;
+  text-align: justify
+}
+
+.egoldsubtabsec ul li {
+  width: 33.33%
+}
+
+.egoldsubtabsec .nav-link.typetabbtn {
+  text-transform: uppercase;
+  background-color: #e0e7ea;
+  color: #648795;
+  border: 1px solid #648795;
+  align-items: center
+}
+
+.egoldsubtabsec .nav-link.typetabbtn.active {
+  color: #fff;
+  background-color: #648795
+}
+
+.minerownedsec {
+  background-color: #4f6b75;
+  color: #fff;
+  border-radius: 8px;
+  padding: 20px
+}
+
+.minersownedp,
+.sliderinput input {
+  font-size: 14px
+}
+
+.minerownep {
+  font-size: 12px;
+  color: #fff
+}
+
+.minerownep2 {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500
+}
+
+.minerstate {
+  text-align: center
+}
+
+.mineaccorsec {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px;
+  background-color: #fff;
+  border-radius: 8px 8px 0 0;
+  align-items: center
+}
+
+.mineaccorbtnsec {
+  width: 60%
+}
+
+.mineaccorbtns {
+  display: flex;
+  width: 100%;
+  gap: 15px
+}
+
+.mineaccorbtn,
+.mineaccorbtn:hover {
+  background-color: #e0e7ea;
+  padding: 10px;
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  color: #4f6b75;
+  border-radius: 4px
+}
+
+.mineaccorbtn.active,
+.mineaccorbtn.active:hover {
+  background-color: #648795;
+  color: #fff
+}
+
+.mineaccorimg {
+  width: 117px;
+  height: 72px;
+  margin-bottom: 5px
+}
+
+.minerownedpsec,
+.performancehistroy {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px
+}
+
+.performancehistroy {
+  padding: 20px
+}
+
+.performancehistroy>div {
+  flex: 1;
+  margin: 0 5px
+}
+
+#accordionExample .accordion-button.mineraccordianbtn.minebtn,
+.performancehistroy {
+  background-color: #e0e7ea;
+  color: #4f6b75
+}
+
+.appactiveminer {
+  display: flex;
+  gap: 30px;
+  padding: 10px 20px;
+  background-color: #c1cfd5
+}
+
+.performancehistroy .minerownep2.redtext {
+  color: red
+}
+
+.performancehistroy .minerownep,
+.performancehistroy .minerownep2 {
+  color: #4f6b75
+}
+
+.customrange {
+  width: 100%;
+  height: 24px;
+  -webkit-appearance: none;
+  background: #e0e7ea;
+  outline: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px #e0e7ea
+}
+
+.customrange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #4f6b75;
+  cursor: pointer;
+  box-shadow: -410px 0 0 400px #82a0ab
+}
+
+.pr {
+  position: relative
+}
+
+.updownimgb {
+  background: #ffb703;
+  width: 20%;
+  border-radius: 4px;
+  padding: 10px 0;
+  text-align: center;
+  position: absolute;
+  bottom: -30px;
+  left: 40%
+}
+
+.fromreactp {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 10px
+}
+
+.fromreactspan,
+.rangevalue p {
+  font-size: 14px;
+  color: #000;
+  font-weight: 700
+}
+
+.float-right {
+  float: right
+}
+
+.fromreactangle {
+  border: 1px solid #e4e5e6;
+  border-radius: 8px
+}
+
+.rangevalue p {
+  color: #253237;
+  font-weight: 500;
+  text-align: center
+}
+
+.swapdelrow {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e0e7ea;
+  padding: 15px
+}
+
+.swapdelrow p {
+  font-size: 12px;
+  color: #253237;
+  font-weight: 600
+}
+
+.bbff {
+  border-bottom: 1px solid #fff
+}
+
+.volhour {
+  padding: 10px;
+  background-color: #e0e7ea;
+  border-radius: 4px
+}
+
+.volhourp {
+  text-align: center;
+  font-size: 12px
+}
+
+.latesttradesec ul li {
+  width: 50%
+}
+
+.lightredbg {
+  background-color: #ffebeb
+}
+
+.lightgreenbg {
+  background-color: #e8fefc
+}
+
+.latesttradetable table {
+  border: 2px solid #f5f5f5;
+  margin-bottom: 0
+}
+
+.latesttradetable td {
+  font-size: 16px;
+  font-weight: 700;
+  color: #4f6b75
+}
+
+.stakeliverow {
+  margin-bottom: 20px
+}
+
+.stakelivebtn,
+.stakelivebtn:hover {
+  padding: 6px 15px;
+  background-color: #648795;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 12px
+}
+
+.livebadge {
+  font-size: 10px;
+  color: #4fd1c5;
+  border: 1px solid #4fd1c5;
+  padding: 2px 15px;
+  border-radius: 10px;
+  float: right
+}
+
+.slfirst {
+  margin-bottom: 20px
+}
+
+.slsecond,
+.tokenmorebtsn span {
+  display: flex;
+  align-items: center
+}
+
+.slsecond,
+.slthird {
+  justify-content: space-between
+}
+
+.slthird {
+  padding: 10px;
+  background-color: #e0e7ea;
+  display: flex
+}
+
+.slfsgroup {
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px 8px 0 0
+}
+
+.slfourth,
+.slfourthbtns {
+  display: flex;
+  justify-content: space-between
+}
+
+.slfourth {
+  padding: 15px;
+  background-color: #c1cfd5;
+  border-radius: 0 0 8px 8px;
+  transition: transform .3s ease-in-out
+}
+
+.slfourthbtns {
+  gap: 15px
+}
+
+.slfourthbtn {
+  border: 0;
+  box-shadow: none;
+  background-color: transparent;
+  padding: 0
+}
+
+.slcollectbtn.active,
+.slstakebtn.active {
+  color: #253237;
+  background-color: #ffc727;
+  border: 1px solid #ffc727
+}
+
+.slcollectbtn,
+.slstakebtn {
+  width: 100px;
+  text-align: center;
+  color: #3a4e56;
+  border: 1px solid #82a0ab;
+  border-radius: 4px
+}
+
+.slfourthdel {
+  padding: 10px;
+  background-color: #c1cfd5
+}
+
+.slide-down-content {
+  height: 0;
+  overflow: hidden;
+  transition: height .3s ease-in-out
+}
+
+.slide-down-content.active {
+  height: auto;
+  border-radius: 0 0 8px 8px
+}
+
+.slfourth.active {
+  border-radius: 0;
+  border-bottom: 1px solid #a1b7c0
+}
+
+.tokenmorebtsn {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 10px
+}
+
+.slidecontent {
+  padding: 10px;
+  background-color: #c1cfd5
+}
+
+.slidecontentp {
+  font-size: 14px;
+  margin-bottom: 10px
+}
+
+.tokenmorebtsn span {
+  gap: 5px
+}
+
+.sliderinput {
+  position: relative;
+  margin-bottom: 5px
+}
+
+.labelmax {
+  right: 0;
+  background-color: #648795;
+  width: 64px;
+  font-size: 12px;
+  color: #ffc727
+}
+
+.labelegold,
+.labelmax,
+.labelusemax {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.labelusemax {
+  right: 0;
+  width: 64px;
+  font-size: 12px;
+  color: #ffc727
+}
+
+.sliderinput.mb15 {
+  margin-bottom: 15px
+}
+
+.labelegold {
+  right: 70px;
+  color: #4f6b75
+}
+
+.labelegold,
+.sliderlabel {
+  font-size: 14px
+}
+
+.labelavailbalp {
+  text-align: end;
+  padding-top: 3px;
+  font-size: 13px;
+  margin-bottom: 10px
+}
+
+.stakegoldp {
+  font-size: 14px;
+  color: #4f6b75;
+  padding: 0px 5px;
+  padding-bottom: 10px;
+  padding-right: 2px;
+}
+
+.sliderinputsec {
+  padding: 8px 0px;
+}
+
+.transferinput,
+.transferlabel {
+  color: #2d3748;
+  font-size: 12px
+}
+
+.completedbadge,
+.upcomingbadge {
+  font-size: 10px;
+  color: #ff5656;
+  border: 1px solid #ff5656;
+  padding: 2px 15px;
+  border-radius: 10px;
+  float: right
+}
+
+.upcomingbadge {
+  color: #ffc727;
+  border: 1px solid #ffc727
+}
+
+.activebadge,
+.expirebadge,
+.inactivebadge {
+  font-size: 10px;
+  color: #ff5656;
+  border: 1px solid #ff5656;
+  padding: 2px 15px;
+  border-radius: 10px
+}
+
+.activebadge {
+  color: #4fd1c5;
+  border: 1px solid #4fd1c5
+}
+
+.activeminerbtn {
+  position: relative
+}
+
+.activeminertext {
+  position: absolute;
+  top: 16px;
+  right: 40px
+}
+
+.bluetext {
+  color: #61d2f5 !important
+}
+
+
+.wallettokencell {
+  display: flex;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  align-items: center
+}
+
+.wallettokenimg {
+  width: 24px
+}
+
+.wallettoken {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd
+}
+
+.walletokenp {
+  font-size: 12px
+}
+
+.walletrowimgsec {
+  display: flex;
+  gap: 5px;
+  align-items: center
+}
+
+.pingimg,
+.walletrowimg {
+  width: 24px
+}
+
+.walletrow {
+  display: flex;
   justify-content: space-between;
   padding: 10px;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px
+}
+
+.walletpingsec {
   display: flex;
+  gap: 10px;
+  align-items: center
 }
 
-.textquick {
-  font-size: 14px;
-  font-weight: 400;
-  color: #4f6b75;
-}
-
-.textquickend {
-  font-size: 14px;
-  font-weight: 600;
-  color: #4f6b75;
-}
-
-.quickbuy {
-  height: 37px;
-  padding: 0px 10px;
-  min-width: 132px;
-  border-radius: 8px;
-  background: white;
-  color: #253237;
-  font-size: 14px;
-  font-weight: 600;
-  border: 1px solid #4f6b75;
-  border-radius: 8px;
-}
-
-.quickactivate{
-  border:0px;
-}
-.quickcompleted,.quickcompleted:hover{
-  border:0px;
-  height: 37px;
-  padding: 0px 10px;
-  min-width: 132px;
-  border-radius: 8px;
-  background: white;
-  color: #4FD1C5;
-  font-size: 14px;
-  font-weight: 600;
-  border: 1px solid #4FD1C5;
-  border-radius: 8px;
-}
-
-.quickstartdiv {
-  border: 1px solid #d9d9d9 !important;
-  margin-bottom: 0px !important;
-}
-
-.egoldminertab {
-  font-weight: 400;
-  gap: 8px;
-  display: flex;
+.walletbadge {
   text-align: center;
-  font-size: 18px;
+  font-size: 8px;
+  background-color: #ddd;
+  color: #666;
+  padding: 3px;
+  height: 16px;
+  width: 34px;
+  border-radius: 8px
 }
 
-.rulesdiv {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-  padding: 10px;
+.walletpingdelprice {
+  font-size: 10px;
+  text-align: end
 }
 
-.rulesbtn {
-  width: 100%;
-  padding: 10px;
-  border-radius: 8px;
-  background: white;
-  color: #3a4e56;
-  font-weight: 600;
-  font-size: 16px;
-  border: 1px solid #4f6b75;
+.walletpingp {
+  font-size: 14px;
+  color: #253237;
+  font-weight: 700
 }
 
-.claimsilver {
-  padding: 10px 20px;
-  width: 50%;
-  background: #c8c8c8;
-  color: #3a4e56;
-  font-size: 16px;
-  font-weight: 600;
-  border: none;
-  border-radius: 8px;
+.walletpopupfooterp {
+  font-size: 12px
 }
 
-.claimgold {
-  padding: 10px 20px;
-  width: 100%;
-  background: #ffc727;
-  color: #3a4e56;
-  font-size: 16px;
-  font-weight: 600;
-  border: none;
-  border-radius: 8px;
+.wallettokenheaderbg {
+  background-color: #f5f5f5
 }
 
-.claimgold:disabled {
+.selecttokendrop:hover {
+  cursor: pointer
+}
+
+.width20 {
+  width: 20px
+}
+
+@media (max-width:520px) {
+  .slfsgroup {
+      padding: 10px
+  }
+
+  .activeminertext {
+      position: absolute;
+      top: 10px;
+      right: 30px
+  }
+
+  .wallettokencell {
+      display: flex;
+      padding: 3px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      gap: 3px;
+      justify-content: center;
+      align-items: center
+  }
+
+  .wallettoken {
+      display: flex;
+      gap: 10px;
+      padding-bottom: 10px
+  }
+
+  .wallettokenimg {
+      width: 16px
+  }
+
+  .walletokenp {
+      font-size: 10px
+  }
+
+  .walletrowimgp {
+      font-size: 12px
+  }
+
+  .latesttradetable td,
+  .walletpopupfooterp {
+      font-size: 10px
+  }
+
+  #accordionExample .accordion-button,
+  .latesttradetable th,
+  .mineaccorbtn:hover {
+      font-size: 12px
+  }
+
+  .minerownep {
+      font-size: 8px
+  }
+
+  .minerownep2,
+  .slsecond span {
+      font-size: 10px
+  }
+
+  .minersownedp {
+      font-size: 12px
+  }
+
+  .mineaccorbtn {
+      padding: 5px;
+      font-size: 8px
+  }
+
+  .wallettabsec .nav-link.typetabbtn {
+      padding: 5px 0;
+      font-size: 10px
+  }
+
+  .mineaccorimg {
+      width: 75px;
+      height: auto;
+      margin: 0
+  }
+
+  .slthird span {
+      font-size: 8px
+  }
+
+  .slfourthbtn {
+      font-size: 10px
+  }
+
+  .slfourthbtn img {
+      width: 8px
+  }
+
+  .slcollectbtn,
+  .slstakebtn {
+      width: 55px;
+      font-size: 10px
+  }
+
+  .slfourthbtns {
+      gap: 5px
+  }
+
+  .activebadge,
+  .completedbadge,
+  .expirebadge,
+  .inactivebadge,
+  .livebadge,
+  .upcomingbadge {
+      font-size: 6px;
+      padding: 0 8px
+  }
+
+  .stakelivebtn,
+  .stakelivebtn:hover {
+      padding: 5px 10px;
+      font-size: 10px
+  }
+
+  .slfirst,
+  .stakeliverow {
+      margin-bottom: 10px
+  }
+
+  .slsecond img,
+  .tokenmorebtsn img {
+      width: 15px
+  }
+
+  .slidecontentp,
+  .sliderinput input {
+      font-size: 10px
+  }
+
+  .tokenmorebtsn span {
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 2px
+  }
+
+  .tokenmorebtsn {
+      gap: 5px
+  }
+
+  .labelmax {
+      width: 44px
+  }
+
+  .labelegold {
+      position: absolute;
+      right: 48px
+  }
+
+  .fs14 {
+      font-size: 12px
+  }
+
+  .fromreactangle {
+      padding: 10px
+  }
+
+  .labelmax {
+      font-size: 10px
+  }
+
+  .egoldcommbtns a,
+  .egoldcommunitybody p,
+  .labelegold {
+      font-size: 12px
+  }
+
+  .labelavailbalp,
+  .sliderlabel {
+      font-size: 10px
+  }
+
+  .stakegoldp {
+      font-size: 12px;
+      color: #4f6b75
+  }
+
+  .appactiveminer {
+      gap: 15px;
+      padding: 10px
+  }
+
+  .btn-bg-yellow {
+      height: 30px;
+      min-width: 90px
+  }
+
+  .egoldaccordianimg {
+      padding: 5px;
+      background-color: var(--primarycolor)
+  }
+
+  .egoldaccordianimg img {
+      width: 26px;
+      height: 26px
+  }
+
+  .egoldcommunitybtnp {
+      color: #fff;
+      font-size: 12px;
+      font-weight: 500;
+      padding-left: 10px
+  }
+}
+
+@media screen and (max-width:480px) {
+  .yeiddiv {
+      font-size: 13px
+  }
+
+  #overlay {
+      font-size: 12px
+  }
+}
+
+.swapinput {
+  border: 0;
+  font-weight: 700;
+  outline: 0;
+  width: 60%;
+}
+
+
+.bnbicon {
+  background-image: url("./images/currency/bnb.svg");
+  display: inline-block;
+  height: 20px;
+  width: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.wbnbicon {
+  background-image: url("./images/currency/bnb.svg");
+  display: inline-block;
+  height: 20px;
+  width: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.busdicon {
+  background-image: url("./images/currency/busd.svg");
+  display: inline-block;
+  height: 20px;
+  width: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.egoldicon {
+  background-image: url("./images/currency/egold.svg");
+  display: inline-block;
+  height: 20px;
+  width: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.cbkicon {
+  background-image: url("./images/currency/cbk.svg");
+  display: inline-block;
+  height: 20px;
+  width: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.btn-color-primary:disabled {
   border: 0px;
   background: #ffda6e;
   color: #b2b0b0;
 }
 
-.qscardtile{
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 0.4px;
-  text-align: right;
-}
-/* quick bonus tree  */
-
-.qbtree .firstul {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
-  padding-top: 10px;
+.btn-disabled {
+  border: 0px;
+  background: #ffda6e;
+  color: #b2b0b0;
 }
 
-.qbtree ul {
-  padding-top: 20px;
-  padding-left: 0px;
-  position: relative;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
+.btn-secondary-disabled {
+  background: #e2e2e2 !important;
+  border: 1px solid #979797 !important;
+  color: #979797 !important;
 }
 
-.qbtree li {
-  float: left;
-  text-align: center;
-  list-style-type: none;
-  position: relative;
-  padding: 20px 12px 0 12px;
-
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-}
-
-/*We will use ::before and ::after to draw the connectors*/
-
-.qbtree li::before,
-.qbtree li::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 50%;
-  border-top: 2px solid #ddd;
-  width: 50%;
-  height: 20px;
-}
-
-.qbtree li::after {
-  right: auto;
-  left: 50%;
-  border-left: 2px solid #ddd;
-}
-
-/*We need to remove left-right connectors from elements without 
-any siblings*/
-.qbtree li:only-child::after,
-.qbtree li:only-child::before {
+.mobbr {
   display: none;
 }
 
-/*Remove space from the top of single children*/
-.qbtree li:only-child {
-  padding-top: 0;
-}
-
-/*Remove left connector from first child and 
-right connector from last child*/
-.qbtree li:first-child::before,
-.qbtree li:last-child::after {
-  border: 0 none;
-}
-
-/*Adding back the vertical connector to the last nodes*/
-.qbtree li:last-child::before {
-  border-right: 2px solid #ddd;
-  border-radius: 0 5px 0 0;
-  -webkit-border-radius: 0 5px 0 0;
-  -moz-border-radius: 0 5px 0 0;
-}
-
-.qbtree li:first-child::after {
-  border-radius: 5px 0 0 0;
-  -webkit-border-radius: 5px 0 0 0;
-  -moz-border-radius: 5px 0 0 0;
-}
-
-/*Time to add downward connectors from parents*/
-.qbtree ul ul::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  border-left: 2px solid #ddd;
-  width: 0;
-  height: 20px;
-}
-
-.qbtree li div {
-  padding: 12px 10px;
-  text-decoration: none;
-  background: #4f6b75;
-  color: #fff;
-  font-size: 12px;
-  font-weight: 600;
-  display: inline-block;
-  border-radius: 100%;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  height: 42px;
-  width: 42px;
-}
-
-.qbtree li div.silver {
-  background-color: #e4e5e5;
-  color: #000;
-}
-
-.qbtree li div.silver.active {
-  background-color: #c8c8c8;
-  color: #000;
-}
-
-.qbtree li div.gold {
-  background-color: #ffdd7b;
-  color: #000;
-}
-
-.qbtree li div.gold.active {
-  background-color: #ffc727;
-  color: #000;
-}
-
-/*Time for some hover effects*/
-/*We will apply the hover effect the the lineage of the element also*/
-.qbtree li div:hover,
-.qbtree li div:hover+ul li a {
-  background: #c8e4f8;
-  color: #000;
-  border: 1px solid #94a0b4;
-}
-
-/*Connector styles on hover*/
-.qbtree li div:hover+ul li::after,
-.qbtree li div:hover+ul li::before,
-.qbtree li div:hover+ul::before,
-.qbtree li div:hover+ul ul::before {
-  border-color: #94a0b4;
-}
-
-.treenodes {
-  visibility: hidden;
-}
-
-.active .treenodes {
-  visibility: visible;
-}
-
-@media screen and (max-width: 520px) {
-  .qbtree li div {
-    height: 36px;
-    width: 36px;
-    padding: 10px 0px;
+@media (max-width: 400px) {
+  .mobbr {
+      display: block;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .qbtree li {
-    padding: 20px 13px 0 13px;
-  }
-}
-
-@media screen and (max-width: 410px) {
-  .qbtree li div {
-    height: 33px;
-    width: 33px;
-    padding: 8px 0px;
-  }
-
-  .qbtree li {
-    padding: 20px 10px 0 10px;
-  }
-}
-
-@media screen and (max-width: 350px) {
-  .qbtree li div {
-    height: 26px;
-    width: 26px;
-    padding: 5px 0px;
-    font-size: 10px;
-  }
-
-  .qbtree li {
-    padding: 20px 6px 0 6px;
-  }
-}
-
-.referheading {
-  color: #4f6b75;
-  font-weight: 600;
-}
-
-.dbgreferheading {
-  color: #fff;
-  font-weight: 600;
-}
-
-.quicktext {
-  color: #fff;
-  font-weight: 500;
-  line-height: 32px;
-}
-
-.dbg-card {
-  background-color: #648795;
-}
-
-.referinvibtns {
-  cursor: pointer;
-  border-color: #4f6b75;
-  color: #4f6b75;
-}
-
-.refercardbg {
-  background-color: #648795;
-  padding: 12px 20px !important;
-}
-
-@media screen and (min-width: 520px) {
-  .headcontainer {
-    max-width: 600px;
-    margin: auto;
-    padding: 0px;
-  }
-
-  #header {
-    margin: 20px auto !important;
-  }
-}
-
-@media screen and (max-width: 610px) {
-  .headcontainer {
-    padding: 0px 10px;
-  }
-
-  #header {
-    margin-bottom: 10px !important;
-  }
-}
-
-/* @media screen and (min-width: 610px) {
-  .headcontainer {
-    padding: 0px 10px;
-  }
-} */
-
-@media screen and (min-width: 1000px) {
-  .headcontainer {
-    max-width: 920px;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .headcontainer {
-    max-width: 850px;
-    margin: 0 auto;
-  }
-
-  .innerhc {
-    padding: 0px 35px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .headcontainer {
-    max-width: 1120px;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .headcontainer {
-    max-width: 1320px;
-    margin: 0 auto;
-  }
-}
-
-.cardtop {
-  padding: 14px 20px !important;
-  font-size: 15px;
-}
-
-.cardtext {
-  padding: 16px 20px !important;
-}
-
-.cardtext p {
-  font-size: 13px;
-}
-
-.darkbgselect {
-  background-image: url(./images/downarrow.png);
-  background-size: 12px 8px;
-}
-
-.form-select.darksec-bg {
-  background-image: url(./images/downarrow.png);
-  background-size: 12px 8px;
+.txcards {
+  background: #eeeeee;
+  margin-top: 12px;
+  border-radius: 10px;
 }
 
 .accordion-item {
-  border-radius: 8px !important;
+  border: 1px solid rgb(227 227 227);
 }
 
-.mineraccordianbtn {
-  border-radius: 8px !important;
-}
-
-.rcard-bg {
-  background-color: #d0dbe0;
-}
-
-.rcard-bg .text2 {
-  color: #4c6974 !important;
-}
-
-.inviaddress {
-  color: rgb(206, 218, 222);
+.warninfobox{
+  background-color: rgb(79, 107, 117);
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 2px 20px;
+  display: block;
   font-size: 14px;
-}
-
-.complanbtn {
-  cursor: pointer;
-  font-size: 13px;
-}
-
-.inviprefer {
-  text-align: left;
-  font-size: 13px;
-}
-
-@media screen and (max-width: 520px) {
-  .quicktext {
-    font-size: 17px;
-    line-height: 23px;
-  }
-
-  .inviprefer {
-    font-size: 11px;
-  }
-
-  .cols-6 {
-    width: 50%;
-    text-align: center !important;
-  }
-
-  .mob-mb-25 {
-    margin-bottom: 25px;
-  }
-
-  .backheadmed {
-    font-size: 16px !important;
-  }
-
-  .backbtn {
-    font-size: 15px !important;
-  }
-
-  .backbtn svg {
-    font-size: 24px !important;
-  }
-
-  .maccdn .manageaccorheadp {
-    width: 80%;
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 460px) {
-  .referinvitep {
-    font-size: 13px;
-  }
-
-  .inviaddress {
-    font-size: 12px;
-  }
-
-  .inviprefer {
-    font-size: 11px;
-  }
-
-  .refercardbg {
-    padding: 12px 15px !important;
-  }
-
-  .backbtn {
-    font-size: 14px !important;
-    gap: 2px !important;
-  }
-
-  .backbtn svg {
-    font-size: 22px !important;
-  }
-}
-
-@media screen and (max-width: 410px) {
-  .referinvitep {
-    font-size: 12px;
-  }
-
-  .inviaddress {
-    font-size: 11px;
-  }
-
-  .complanbtn {
-    font-size: 11px !important;
-  }
-
-  .quicktext {
-    font-size: 14px;
-    line-height: 21px;
-  }
-
-  .inviprefer {
-    font-size: 9px;
-  }
-
-  .backbtn {
-    font-size: 12px !important;
-  }
-
-  .backbtn svg {
-    font-size: 23px !important;
-  }
-
-  .backtext {
-    display: none;
-  }
-
-  .maccdn .manageaccorheadp {
-    width: 80%;
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 395px) {
-  .complanbtn {
-    font-size: 10px !important;
-  }
-
-  .refercardbg {
-    padding: 12px !important;
-  }
-
-  .backheadmed {
-    font-size: 16px !important;
-  }
-}
-
-button:focus {
-  box-shadow: none !important;
-}
-
-button:active {
-  box-shadow: none !important;
-}
-
-@media screen and (max-width: 795px) {
-  .maccdn .mineraccordianbtn {
-    gap: 15% !important;
-  }
-
-  .maccdn .minerimg {
-    width: 20%;
-  }
-}
-
-.bg-dbg {
-  background-color: #4f6b75;
-}
-
-.teaccordion {
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-  max-height: 0;
-}
-
-.teaccordion.open {
-  max-height: 500px;
-  /* Adjust the max-height as needed */
-}
-
-.teaccordion-content {
-  padding-top: 20px;
-}
-
-:focus-visible {
-  outline: 0px;
-}
-
-.managebtns {
-  display: flex;
-}
-
-.managebtns a {
-  width: 50%;
-}
-
-.calcwrap {
-  background: #ffff;
-  border-radius: 8px;
-  padding: 20px;
-}
-
-.yeiddiv {
-  background: #f5f5f5;
-  justify-content: space-between;
-  display: flex;
-  padding: 15px;
-  border-radius: 8px;
-  border: 1px solid #e2e8f0;
-}
-
-@media screen and (max-width: 480px) {
-  .yeiddiv {
-    font-size: 13px;
-  }
-
-  #overlay {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 1000px) {
-
-  .calcell,
-  .respmb {
-    margin-bottom: 20px;
-  }
-
-  #footer {
-    padding: 0px;
-  }
-
-  .social-links {
-    justify-content: space-around;
-    background-color: #3a4e56;
-    padding: 10px;
-  }
-
-  .footerlist {
-    /* transform: translate(25%, 50%);
-    max-width: 200px; */
-    justify-content: center;
-  }
-
-  #footer .col-lg-8 {
-    padding: 25px;
-  }
-}
-
-/* overlay connect button  */
-
-#overlay {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
-  right: 0px;
-  background-color: rgb(57 57 57 / 63%);
-  border-radius: 15px 15px 12px 12px;
-  display: flex;
-  align-items: center;
   color: white;
-  font-size: 18px;
-  font-weight: 500;
-  flex-direction: column;
-  gap: 25px;
-  box-shadow: 0px 2px 11px 1px #38383885;
-}
-
-#but1:disabled {
-  cursor: not-allowed;
-  pointer-events: unset;
-}
-
-.connectinoverlay {
-  float: right;
-  font-size: 10px;
-  font-family: Helvetica;
-  font-weight: 700;
-  border-radius: 8px;
-  background: #ffc727;
-  padding: 0px 8px;
-  width: 180px;
-  height: 45px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  color: #000;
-  margin-top: 250px;
-}
-
-.connectinoverlay button,
-.connectinoverlay button:hover,
-.connectinoverlay button:focus {
-  font-size: 12px !important;
-  color: #000;
-}
-
-@media screen and (max-width: 490px) {
-  #overlay {
-    font-size: 14px;
-  }
-
-  .connectinoverlay {
-    height: 35px !important;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  #overlay {
-    font-size: 12px;
-    gap: 18px;
-  }
-
-  .connectinoverlay {
-    height: 38px !important;
-    width: 150px !important;
-  }
-}
-
-.disabledcurrency {
-
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.containerbuy {
-  position: relative;
-  cursor: not-allowed;
-}
-
-.contentbuy {
-  background-color: #ffffff;
-}
-
-.overlaybuy {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  border-radius: 8px;
-  height: 100%;
-  background-color: rgb(111 111 111 / 50%);
-  pointer-events: none;
-}
-
-
-@media screen and (max-width: 410px) {
-  .quickactivate{
-    height: 45px!important;
-  }
-}
-
-.claimgold:disabled {
-  border: 0px;
-  background: #ffda6e;
-  color: #b2b0b0;
+  text-transform: uppercase;
 }

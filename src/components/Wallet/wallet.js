@@ -160,6 +160,7 @@ export default function Wallet() {
     <main>
       <div class="mainsection">
         <div class="tabsec secpadding lightgrey-bg brtlr">
+          <BackButton Title="Wallet" ReRoute="trade" />
           <div class="sendreceivesec darksec-bg mb20">
             <p class="walletamtp">
               $
@@ -187,27 +188,7 @@ export default function Wallet() {
             </div>
           </div>
           <div class="wallettabsec lightgrey-bg brtlr">
-            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-              <li
-                class="nav-item"
-                role="presentation"
-                style={{ width: "100%" }}
-              >
-                <button
-                  class="nav-link typetabbtn active "
-                  style={{ borderRadius: "8px" }}
-                  id="pills-token-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#pills-token"
-                  type="button"
-                  role="tab"
-                  aria-controls="pills-token"
-                  aria-selected="true"
-                >
-                  TOKEN
-                </button>
-              </li>
-            </ul>
+           
             <div class="tab-content" id="pills-tabContent">
               <div
                 class="tab-pane fade show active"

@@ -9,6 +9,9 @@ import Wallet from "./components/Wallet/wallet";
 import Send from "./components/Wallet/send";
 import Receive from "./components/Wallet/receive";
 import SelectToken from "./components/Wallet/SelectToken";
+
+import Swap from "./components/AppTradeSwap";
+
 import { hooks as metaMaskHooks, metaMask } from "./connectors/metaMask";
 import {
   coinbaseWallet,
@@ -37,9 +40,24 @@ const router = createBrowserRouter([
     path: "/",
     element: (
       <>
-      <HeaderNoWallet />
-      <Wallet />
-      <Footer />
+        <div style={{ flex: "1 1" }}>
+          <Header />
+          <Swap />
+        </div>
+        <Footer />
+      </>
+    ),
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/trade",
+    element: (
+      <>
+        <div style={{ flex: "1 1" }}>
+          <Header />
+          <Swap />
+        </div>
+        <Footer />
       </>
     ),
     errorElement: <ErrorPage />,
@@ -115,8 +133,8 @@ const isSiteDown = false;
 root.render(
   <StrictMode>
     <Web3ReactProvider connectors={connectors}>
-      <div className="wrapper">
-        <div className="content">
+      <div className="content">
+        <div className="wrapper">
           <RouterProvider router={router} />
         </div>
       </div>
